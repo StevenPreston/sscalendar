@@ -1,0 +1,22 @@
+PODS:
+  - Nimble (3.2.0)
+  - Quick (0.9.3)
+  - SSCalendar (0.1.0)
+
+DEPENDENCIES:
+  - Nimble (~> 3.0)
+  - Quick (~> 0.8)
+  - SSCalendar (from `../`)
+
+EXTERNAL SOURCES:
+  SSCalendar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  SSCalendar: 2ff82f254568275375bc671f59be15b1b30aee37
+
+PODFILE CHECKSUM: 818f89e7e72a9ba51fac8b75f9ad8158e35313fd
+
+COCOAPODS: 1.0.1
