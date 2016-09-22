@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSCalendarDailyViewController">
+            <connections>
+                <outlet property="dateLabel" destination="CGx-Tn-mkq" id="Thy-0I-15a"/>
+                <outlet property="dayView" destination="A3z-11-QeX" id="7ac-cz-tan"/>
+                <outlet property="headerView" destination="8tO-Lu-hrY" id="Pg6-Cg-swE"/>
+                <outlet property="separatorView" destination="spP-f0-ddi" id="ig2-IB-Gh1"/>
+                <outlet property="separatorViewHeightConstraint" destination="xJq-Oo-Tb8" id="giA-bZ-crj"/>
+                <outlet property="todayBarButtonItem" destination="REc-ri-XmK" id="ydB-Kn-Skd"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="weekView" destination="5Dk-rM-qoP" id="bev-D2-6ih"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tO-Lu-hrY" userLabel="Header View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayZ-YB-E2d" customClass="SSCalendarWeekHeaderView">
+                            <rect key="frame" x="-1" y="0.0" width="322" height="18"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="7EW-m0-49r"/>
+                            </constraints>
+                        </view>
+                        <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5Dk-rM-qoP" userLabel="Week View">
+                            <rect key="frame" x="-1" y="18" width="322" height="43"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="QCc-cb-aej"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="N3e-5o-KO1">
+                                <size key="itemSize" width="46" height="43"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <cells/>
+                        </collectionView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGx-Tn-mkq" userLabel="Date Label">
+                            <rect key="frame" x="0.0" y="61" width="320" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Dfa-m2-dag"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="CGx-Tn-mkq" firstAttribute="top" secondItem="5Dk-rM-qoP" secondAttribute="bottom" id="3Ko-Cu-fSh"/>
+                        <constraint firstItem="5Dk-rM-qoP" firstAttribute="top" secondItem="ayZ-YB-E2d" secondAttribute="bottom" id="Lc9-FB-HXj"/>
+                        <constraint firstAttribute="height" constant="84" id="M8J-Gf-neh"/>
+                        <constraint firstItem="CGx-Tn-mkq" firstAttribute="leading" secondItem="8tO-Lu-hrY" secondAttribute="leading" id="Tlq-yI-wW9"/>
+                        <constraint firstItem="5Dk-rM-qoP" firstAttribute="leading" secondItem="8tO-Lu-hrY" secondAttribute="leading" constant="-1" id="Vf0-yw-5Xy"/>
+                        <constraint firstAttribute="trailing" secondItem="ayZ-YB-E2d" secondAttribute="trailing" constant="-1" id="Yrk-Ud-J0V"/>
+                        <constraint firstAttribute="trailing" secondItem="CGx-Tn-mkq" secondAttribute="trailing" id="cj7-CX-p2M"/>
+                        <constraint firstItem="ayZ-YB-E2d" firstAttribute="top" secondItem="8tO-Lu-hrY" secondAttribute="top" id="waz-co-g9G"/>
+                        <constraint firstItem="ayZ-YB-E2d" firstAttribute="leading" secondItem="8tO-Lu-hrY" secondAttribute="leading" constant="-1" id="xbS-qA-95x"/>
+                        <constraint firstAttribute="trailing" secondItem="5Dk-rM-qoP" secondAttribute="trailing" constant="-1" id="xjy-kn-bx2"/>
+                    </constraints>
+                </view>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="A3z-11-QeX">
+                    <rect key="frame" x="0.0" y="85" width="320" height="439"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZNC-CF-zKm">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spP-f0-ddi" userLabel="Separator View">
+                    <rect key="frame" x="0.0" y="84" width="320" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="xJq-Oo-Tb8"/>
+                    </constraints>
+                </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1i-kO-cBb">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <items>
+                        <barButtonItem title="Item" id="REc-ri-XmK" userLabel="Today Bar Button Item">
+                            <connections>
+                                <action selector="todayPressed:" destination="-1" id="dPZ-WO-Wlk"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="r1i-kO-cBb" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="0zx-Qt-wHm"/>
+                <constraint firstItem="A3z-11-QeX" firstAttribute="top" secondItem="spP-f0-ddi" secondAttribute="bottom" id="4Qu-Jw-2sy"/>
+                <constraint firstAttribute="bottom" secondItem="r1i-kO-cBb" secondAttribute="bottom" id="BQx-t9-dEY"/>
+                <constraint firstAttribute="trailing" secondItem="8tO-Lu-hrY" secondAttribute="trailing" id="Cgj-mk-Nqn"/>
+                <constraint firstItem="A3z-11-QeX" firstAttribute="bottom" secondItem="r1i-kO-cBb" secondAttribute="bottom" constant="-44" id="FGc-3h-mVt"/>
+                <constraint firstItem="spP-f0-ddi" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="PL5-XY-HSk"/>
+                <constraint firstAttribute="trailing" secondItem="r1i-kO-cBb" secondAttribute="trailing" id="Yfw-mF-Ieb"/>
+                <constraint firstItem="8tO-Lu-hrY" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="cOk-kM-jQD"/>
+                <constraint firstItem="A3z-11-QeX" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="khD-bS-dtC"/>
+                <constraint firstItem="spP-f0-ddi" firstAttribute="top" secondItem="8tO-Lu-hrY" secondAttribute="bottom" id="sU5-2S-0B2"/>
+                <constraint firstAttribute="trailing" secondItem="spP-f0-ddi" secondAttribute="trailing" id="xQB-vg-ZGu"/>
+                <constraint firstAttribute="trailing" secondItem="A3z-11-QeX" secondAttribute="trailing" id="ySE-d6-4g8"/>
+                <constraint firstItem="8tO-Lu-hrY" firstAttribute="top" secondItem="1" secondAttribute="top" id="zbn-uo-kBM"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

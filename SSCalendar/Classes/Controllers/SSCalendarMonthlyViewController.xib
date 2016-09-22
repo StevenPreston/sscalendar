@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <development version="5000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSCalendarMonthlyViewController">
+            <connections>
+                <outlet property="separatorView" destination="rC0-rc-BVL" id="AKT-kp-KSl"/>
+                <outlet property="separatorViewHeightConstraint" destination="kKX-t4-J8j" id="Crq-cH-nqw"/>
+                <outlet property="todayBarButtonItem" destination="2Rk-gH-deO" id="5zs-eE-N48"/>
+                <outlet property="view" destination="834-q0-v2v" id="vuH-hB-bhr"/>
+                <outlet property="yearView" destination="ZXh-4o-ht4" id="8Cn-eX-kiU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="834-q0-v2v">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MD-IZ-tpd" customClass="SSCalendarWeekHeaderView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="18"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="7Ev-sy-I1j"/>
+                    </constraints>
+                </view>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZXh-4o-ht4">
+                    <rect key="frame" x="0.0" y="18" width="320" height="506"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="9" id="xQx-eq-5k8">
+                        <size key="itemSize" width="94" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="16"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3E-0N-LVu">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <items>
+                        <barButtonItem title="Item" id="2Rk-gH-deO" userLabel="Today Bar Button Item">
+                            <connections>
+                                <action selector="todayPressed:" destination="-1" id="BMX-Ko-0iQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rC0-rc-BVL" userLabel="Separator View">
+                    <rect key="frame" x="0.0" y="18" width="320" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="kKX-t4-J8j"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZXh-4o-ht4" firstAttribute="leading" secondItem="834-q0-v2v" secondAttribute="leading" id="GSY-29-45A"/>
+                <constraint firstItem="9MD-IZ-tpd" firstAttribute="top" secondItem="834-q0-v2v" secondAttribute="top" id="MLU-4e-o5o"/>
+                <constraint firstAttribute="trailing" secondItem="9MD-IZ-tpd" secondAttribute="trailing" id="Mj6-bK-7lh"/>
+                <constraint firstAttribute="trailing" secondItem="rC0-rc-BVL" secondAttribute="trailing" id="TLM-Kh-RGG"/>
+                <constraint firstItem="ZXh-4o-ht4" firstAttribute="trailing" secondItem="834-q0-v2v" secondAttribute="trailing" id="Wp9-68-pPn"/>
+                <constraint firstAttribute="bottom" secondItem="ZXh-4o-ht4" secondAttribute="bottom" constant="44" id="ZFr-M0-DWg"/>
+                <constraint firstItem="rC0-rc-BVL" firstAttribute="leading" secondItem="834-q0-v2v" secondAttribute="leading" id="cge-gE-3An"/>
+                <constraint firstItem="f3E-0N-LVu" firstAttribute="leading" secondItem="834-q0-v2v" secondAttribute="leading" id="f0T-hD-ZPx"/>
+                <constraint firstItem="9MD-IZ-tpd" firstAttribute="leading" secondItem="834-q0-v2v" secondAttribute="leading" id="fye-eP-SZM"/>
+                <constraint firstItem="rC0-rc-BVL" firstAttribute="top" secondItem="9MD-IZ-tpd" secondAttribute="bottom" id="gU5-zu-BAk"/>
+                <constraint firstItem="ZXh-4o-ht4" firstAttribute="top" secondItem="9MD-IZ-tpd" secondAttribute="bottom" id="qrN-Ho-pdN"/>
+                <constraint firstAttribute="trailing" secondItem="f3E-0N-LVu" secondAttribute="trailing" id="rfJ-Xd-Qlb"/>
+                <constraint firstAttribute="bottom" secondItem="f3E-0N-LVu" secondAttribute="bottom" id="uqH-cs-E4p"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
