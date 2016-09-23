@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-#import "SSContentViewController.h"
+//#import "SSContentViewController.h"
 
 @class SSCalendarYearViewController;
 
-@interface SSCalendarAnnualViewController : SSContentViewController <UICollectionViewDelegate>
+@interface SSCalendarAnnualViewController : UIViewController <UICollectionViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UICollectionView *yearView;
 @property (nonatomic, strong) SSCalendarYearViewController *yearViewController;

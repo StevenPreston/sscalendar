@@ -9,7 +9,7 @@
 #import "SSCalendarEventsCell.h"
 #import "SSCalendarEventsTableViewController.h"
 #import "SSDayNode.h"
-#import "SSLoadingView.h"
+//#import "SSLoadingView.h"
 
 @implementation SSCalendarEventsCell
 
@@ -20,11 +20,11 @@
     _tableView.dataSource = _tableViewController;
     _tableView.delegate = _tableViewController;
     
-    NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SSLoadingView" owner:self options:nil];
+    /*NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SSLoadingView" owner:self options:nil];
     loadingView = [topLevelObjects objectAtIndex:0];
     loadingView.frame = self.bounds;
     [loadingView showLoading:NO Message:nil Animated:NO];
-    [self.contentView addSubview:loadingView];
+    [self.contentView addSubview:loadingView];*/
 }
 
 
@@ -35,14 +35,14 @@
     _day = day;
     _tableViewController.events = _day.events;
     
-    if ([[SSDataController shared] isRequestingEventsForYear:_day.year Month:_day.month])
+    /*if ([[SSDataController shared] isRequestingEventsForYear:_day.year Month:_day.month])
     {
         [loadingView showLoading:YES Message:NSLocalizedString(@"LoadingLabel", @"") Animated:NO];
     }
     else
     {
         [loadingView showLoading:NO Message:nil Animated:YES];
-    }
+    }*/
 }
 
 @end

@@ -1,4 +1,14 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#import "UIColor+StellarAdditions.h"
+#import "StellarConversionUtils.h"
+#import "SSColors.h"
+#import "SSStyles.h"
+#import "SSDimensions.h"
+#import "SSEvent.h"
+#import "SSCache.h"
+#import "SSCalendarCountCache.h"
+#import "SSCalendarCache.h"
+#import "SSDataController.h"
 #endif
 

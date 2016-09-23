@@ -6,11 +6,9 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-#import "SSTableViewCell.h"
-
 @class SSEvent;
 
-@interface SSCalendarEventTableViewCell : SSTableViewCell
+@interface SSCalendarEventTableViewCell : UITableViewCell
 {
     IBOutlet UILabel *timeLabel;
     IBOutlet UILabel *nameLabel;

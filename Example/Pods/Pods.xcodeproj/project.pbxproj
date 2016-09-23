@@ -34,8 +34,24 @@
 		4E5A721963877AA3A6AA3D80DAA4E5E9 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDAA753452F6B96DE24D2CF7D396628 /* AssertionRecorder.swift */; };
 		5104AE2989305145BF446E633B567924 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE5DB72110FF4FE8D16C90A617EFD92 /* EndWith.swift */; };
 		5110158C71407CF09C2258CAEF4CE2EC /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 7005B0ADF96C275382B45359AE1A0FDC /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52CC87D71D917703216D21B4074229A8 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328E0730DE66312819A3F31B05BD854 /* ReplaceMe.swift */; };
 		582D0B50B66827AF566B661DD558AB0E /* SSCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 261FB7B7113E655E16331F60EE6F4B3F /* SSCalendar-dummy.m */; };
+		599E29431D94C16A0019902D /* SSStyles.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29411D94C16A0019902D /* SSStyles.h */; };
+		599E29441D94C16A0019902D /* SSStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29421D94C16A0019902D /* SSStyles.m */; };
+		599E29471D94C1770019902D /* SSDimensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29451D94C1770019902D /* SSDimensions.h */; };
+		599E29481D94C1770019902D /* SSDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29461D94C1770019902D /* SSDimensions.m */; };
+		599E294B1D94C47B0019902D /* UIColor+StellarAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29491D94C47B0019902D /* UIColor+StellarAdditions.h */; };
+		599E294C1D94C47B0019902D /* UIColor+StellarAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E294A1D94C47B0019902D /* UIColor+StellarAdditions.m */; };
+		599E294F1D94C4A40019902D /* SSColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E294D1D94C4A40019902D /* SSColors.h */; };
+		599E29551D94C8250019902D /* SSCalendarCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29511D94C8250019902D /* SSCalendarCache.h */; };
+		599E29561D94C8250019902D /* SSCalendarCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29521D94C8250019902D /* SSCalendarCache.m */; };
+		599E29571D94C8250019902D /* SSCalendarCountCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29531D94C8250019902D /* SSCalendarCountCache.h */; };
+		599E29581D94C8250019902D /* SSCalendarCountCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29541D94C8250019902D /* SSCalendarCountCache.m */; };
+		599E295B1D94C8A00019902D /* SSCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29591D94C8A00019902D /* SSCache.h */; };
+		599E295C1D94C8A00019902D /* SSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E295A1D94C8A00019902D /* SSCache.m */; };
+		599E295F1D94CA540019902D /* SSDataController.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E295D1D94CA540019902D /* SSDataController.h */; };
+		599E29601D94CA540019902D /* SSDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E295E1D94CA540019902D /* SSDataController.m */; };
+		599E29631D94CE1D0019902D /* StellarConversionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29611D94CE1D0019902D /* StellarConversionUtils.h */; };
+		599E29641D94CE1D0019902D /* StellarConversionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29621D94CE1D0019902D /* StellarConversionUtils.m */; };
 		59F62A661D930304009CB214 /* SSCalendarUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F62A281D930304009CB214 /* SSCalendarUtils.h */; };
 		59F62A671D930304009CB214 /* SSCalendarUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F62A291D930304009CB214 /* SSCalendarUtils.m */; };
 		59F62A681D930304009CB214 /* SSCalendarDayCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F62A2B1D930304009CB214 /* SSCalendarDayCell.h */; };
@@ -221,6 +237,23 @@
 		4659C76C78D4D61BDACC139766D9B7A2 /* Pods-SSCalendar_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SSCalendar_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4EBC862576E582DF711B25DC28CFCDBE /* QuickTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestSuite.swift; path = Sources/Quick/QuickTestSuite.swift; sourceTree = "<group>"; };
 		51465DCF8ECE9AE4DD3DECD5656849CE /* Expectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expectation.swift; path = Sources/Nimble/Expectation.swift; sourceTree = "<group>"; };
+		599E29411D94C16A0019902D /* SSStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSStyles.h; sourceTree = "<group>"; };
+		599E29421D94C16A0019902D /* SSStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSStyles.m; sourceTree = "<group>"; };
+		599E29451D94C1770019902D /* SSDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDimensions.h; sourceTree = "<group>"; };
+		599E29461D94C1770019902D /* SSDimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDimensions.m; sourceTree = "<group>"; };
+		599E29491D94C47B0019902D /* UIColor+StellarAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+StellarAdditions.h"; sourceTree = "<group>"; };
+		599E294A1D94C47B0019902D /* UIColor+StellarAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StellarAdditions.m"; sourceTree = "<group>"; };
+		599E294D1D94C4A40019902D /* SSColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSColors.h; sourceTree = "<group>"; };
+		599E29511D94C8250019902D /* SSCalendarCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarCache.h; sourceTree = "<group>"; };
+		599E29521D94C8250019902D /* SSCalendarCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarCache.m; sourceTree = "<group>"; };
+		599E29531D94C8250019902D /* SSCalendarCountCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarCountCache.h; sourceTree = "<group>"; };
+		599E29541D94C8250019902D /* SSCalendarCountCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarCountCache.m; sourceTree = "<group>"; };
+		599E29591D94C8A00019902D /* SSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCache.h; sourceTree = "<group>"; };
+		599E295A1D94C8A00019902D /* SSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCache.m; sourceTree = "<group>"; };
+		599E295D1D94CA540019902D /* SSDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDataController.h; sourceTree = "<group>"; };
+		599E295E1D94CA540019902D /* SSDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDataController.m; sourceTree = "<group>"; };
+		599E29611D94CE1D0019902D /* StellarConversionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StellarConversionUtils.h; sourceTree = "<group>"; };
+		599E29621D94CE1D0019902D /* StellarConversionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StellarConversionUtils.m; sourceTree = "<group>"; };
 		59F62A281D930304009CB214 /* SSCalendarUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarUtils.h; sourceTree = "<group>"; };
 		59F62A291D930304009CB214 /* SSCalendarUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarUtils.m; sourceTree = "<group>"; };
 		59F62A2B1D930304009CB214 /* SSCalendarDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarDayCell.h; sourceTree = "<group>"; };
@@ -297,7 +330,6 @@
 		7FECB7BA22714038546A0E8DD513114B /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Quick/Configuration/Configuration.swift; sourceTree = "<group>"; };
 		815E2CC62141F08752FFCAFF64B68209 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		823ABE91537CA0E45E3438F7BFB69EB3 /* SSCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SSCalendar.modulemap; sourceTree = "<group>"; };
-		8328E0730DE66312819A3F31B05BD854 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		85564484FA6ABBE76C0B73863EFFFCDE /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Sources/Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
 		875A7681674D572B7002D69BBCD1BA09 /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
 		8824B2EF34D5755E0EF56E02BCA95E6F /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -499,8 +531,19 @@
 		59F62A271D930304009CB214 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				599E29611D94CE1D0019902D /* StellarConversionUtils.h */,
+				599E29621D94CE1D0019902D /* StellarConversionUtils.m */,
+				599E295D1D94CA540019902D /* SSDataController.h */,
+				599E295E1D94CA540019902D /* SSDataController.m */,
+				599E29491D94C47B0019902D /* UIColor+StellarAdditions.h */,
+				599E294A1D94C47B0019902D /* UIColor+StellarAdditions.m */,
 				59F62A281D930304009CB214 /* SSCalendarUtils.h */,
 				59F62A291D930304009CB214 /* SSCalendarUtils.m */,
+				599E29411D94C16A0019902D /* SSStyles.h */,
+				599E29421D94C16A0019902D /* SSStyles.m */,
+				599E29451D94C1770019902D /* SSDimensions.h */,
+				599E29461D94C1770019902D /* SSDimensions.m */,
+				599E294D1D94C4A40019902D /* SSColors.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -566,6 +609,12 @@
 				59F62A501D930304009CB214 /* SSYearNode.h */,
 				59F62A511D930304009CB214 /* SSYearNode.m */,
 				59F62A961D9306B0009CB214 /* Event.swift */,
+				599E29591D94C8A00019902D /* SSCache.h */,
+				599E295A1D94C8A00019902D /* SSCache.m */,
+				599E29511D94C8250019902D /* SSCalendarCache.h */,
+				599E29521D94C8250019902D /* SSCalendarCache.m */,
+				599E29531D94C8250019902D /* SSCalendarCountCache.h */,
+				599E29541D94C8250019902D /* SSCalendarCountCache.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -650,7 +699,6 @@
 				59F62A491D930304009CB214 /* Models */,
 				59F62A521D930304009CB214 /* Table View Cells */,
 				59F62A551D930304009CB214 /* Views */,
-				8328E0730DE66312819A3F31B05BD854 /* ReplaceMe.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -829,7 +877,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				599E29571D94C8250019902D /* SSCalendarCountCache.h in Headers */,
 				59F62A841D930304009CB214 /* SSYearNode.h in Headers */,
+				599E295B1D94C8A00019902D /* SSCache.h in Headers */,
 				59F62A901D930304009CB214 /* SSCalendarWeekViewController.h in Headers */,
 				59F62A661D930304009CB214 /* SSCalendarUtils.h in Headers */,
 				59F62A941D930304009CB214 /* SSCalendarYearViewController.h in Headers */,
@@ -843,16 +893,23 @@
 				59F62A701D930304009CB214 /* SSCalendarDailyViewController.h in Headers */,
 				59F62A861D930304009CB214 /* SSCalendarEventTableViewCell.h in Headers */,
 				59F62A8A1D930304009CB214 /* SSCalendarMonthHeaderView.h in Headers */,
+				599E29471D94C1770019902D /* SSDimensions.h in Headers */,
 				59F62A781D930304009CB214 /* SSCalendarDayLayout.h in Headers */,
 				59F62A741D930304009CB214 /* SSCalendarEventsTableViewController.h in Headers */,
 				59F62A6E1D930304009CB214 /* SSCalendarAnnualViewController.h in Headers */,
+				599E29551D94C8250019902D /* SSCalendarCache.h in Headers */,
+				599E294B1D94C47B0019902D /* UIColor+StellarAdditions.h in Headers */,
 				59F62A7C1D930304009CB214 /* SSCalendarWeekLayout.h in Headers */,
 				59F62A8E1D930304009CB214 /* SSCalendarWeekHeaderView.h in Headers */,
+				599E295F1D94CA540019902D /* SSDataController.h in Headers */,
 				59F62A761D930304009CB214 /* SSCalendarAnnualLayout.h in Headers */,
+				599E29631D94CE1D0019902D /* StellarConversionUtils.h in Headers */,
 				59F62A8C1D930304009CB214 /* SSCalendarMonthViewController.h in Headers */,
 				59F62A7E1D930304009CB214 /* SSDayNode.h in Headers */,
 				59F62A921D930304009CB214 /* SSCalendarYearHeaderView.h in Headers */,
 				59F62A681D930304009CB214 /* SSCalendarDayCell.h in Headers */,
+				599E294F1D94C4A40019902D /* SSColors.h in Headers */,
+				599E29431D94C16A0019902D /* SSStyles.h in Headers */,
 				8EBB3D9B1345B9CAADF9EC1497E91B18 /* SSCalendar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1099,13 +1156,19 @@
 				59F62A7B1D930304009CB214 /* SSCalendarMonthlyLayout.m in Sources */,
 				59F62A851D930304009CB214 /* SSYearNode.m in Sources */,
 				59F62A711D930304009CB214 /* SSCalendarDailyViewController.m in Sources */,
+				599E295C1D94C8A00019902D /* SSCache.m in Sources */,
 				59F62A751D930304009CB214 /* SSCalendarEventsTableViewController.m in Sources */,
+				599E29481D94C1770019902D /* SSDimensions.m in Sources */,
 				59F62A671D930304009CB214 /* SSCalendarUtils.m in Sources */,
 				59F62A831D930304009CB214 /* SSMonthNode.m in Sources */,
 				59F62A971D9306B0009CB214 /* Event.swift in Sources */,
-				52CC87D71D917703216D21B4074229A8 /* ReplaceMe.swift in Sources */,
 				59F62A931D930304009CB214 /* SSCalendarYearHeaderView.m in Sources */,
+				599E29561D94C8250019902D /* SSCalendarCache.m in Sources */,
+				599E29601D94CA540019902D /* SSDataController.m in Sources */,
+				599E29581D94C8250019902D /* SSCalendarCountCache.m in Sources */,
+				599E29441D94C16A0019902D /* SSStyles.m in Sources */,
 				59F62A8B1D930304009CB214 /* SSCalendarMonthHeaderView.m in Sources */,
+				599E29641D94CE1D0019902D /* StellarConversionUtils.m in Sources */,
 				59F62A871D930304009CB214 /* SSCalendarEventTableViewCell.m in Sources */,
 				582D0B50B66827AF566B661DD558AB0E /* SSCalendar-dummy.m in Sources */,
 				59F62A7D1D930304009CB214 /* SSCalendarWeekLayout.m in Sources */,
@@ -1115,6 +1178,7 @@
 				59F62A811D930304009CB214 /* SSEvent.m in Sources */,
 				59F62A7F1D930304009CB214 /* SSDayNode.m in Sources */,
 				59F62A951D930304009CB214 /* SSCalendarYearViewController.m in Sources */,
+				599E294C1D94C47B0019902D /* UIColor+StellarAdditions.m in Sources */,
 				59F62A911D930304009CB214 /* SSCalendarWeekViewController.m in Sources */,
 				59F62A6B1D930304009CB214 /* SSCalendarEventsCell.m in Sources */,
 				59F62A6F1D930304009CB214 /* SSCalendarAnnualViewController.m in Sources */,

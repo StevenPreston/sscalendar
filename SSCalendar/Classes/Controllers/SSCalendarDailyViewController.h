@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-#import "SSContentViewController.h"
+//#import "SSContentViewController.h"
 
 @class SSCalendarWeekViewController, SSCalendarDayViewController, SSDayNode;
 
-@interface SSCalendarDailyViewController : SSContentViewController <UICollectionViewDelegateFlowLayout>
+@interface SSCalendarDailyViewController : UIViewController <UICollectionViewDelegateFlowLayout>
 {
     IBOutlet UIView *headerView;
     IBOutlet UIView *separatorView;

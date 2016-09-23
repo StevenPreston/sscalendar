@@ -16,5 +16,6 @@
 @property (nonatomic, copy) NSString *desc;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, copy) NSString *contact;
+@property (nonatomic, assign) NSInteger day;
 
 @end

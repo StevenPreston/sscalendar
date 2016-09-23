@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-#import "SSContentViewController.h"
+//#import "SSContentViewController.h"
 
 @class SSCalendarMonthViewController;
 
-@interface SSCalendarMonthlyViewController : SSContentViewController <UICollectionViewDelegate>
+@interface SSCalendarMonthlyViewController : UIViewController <UICollectionViewDelegate>
 {
     IBOutlet UIView *separatorView;
     IBOutlet NSLayoutConstraint *separatorViewHeightConstraint;

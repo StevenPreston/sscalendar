@@ -84,7 +84,7 @@
 {
     [_weekView reloadData];
     [self selectDayInWeekView];
-    BOOL requestMade = [[SSDataController shared] requestEventsWithYear:_day.year Month:_day.month];
+    BOOL requestMade = NO;//[[SSDataController shared] requestEventsWithYear:_day.year Month:_day.month];
     if (requestMade)
     {
         [_dayView reloadData];
@@ -98,7 +98,7 @@
 {
     _day = day;
 
-    BOOL requestMade = [[SSDataController shared] requestEventsWithYear:_day.year Month:_day.month];
+    BOOL requestMade = NO;//[[SSDataController shared] requestEventsWithYear:_day.year Month:_day.month];
     if (requestMade)
     {
         [_dayView reloadData];
@@ -239,7 +239,7 @@
 
 #pragma mark - NotificationObserver Methods
 
-- (void)notificationReceived:(NSNotification *)notification
+/*- (void)notificationReceived:(NSNotification *)notification
 {
     NSDictionary *userInfo = [notification userInfo];
     
@@ -276,6 +276,6 @@
             }
         }
     }
-}
+}*/
 
 @end

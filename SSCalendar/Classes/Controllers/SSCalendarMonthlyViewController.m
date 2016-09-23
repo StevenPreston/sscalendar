@@ -76,8 +76,8 @@
         SSYearNode *firstYear = [_yearViewController.years objectAtIndex:0];
         SSYearNode *lastYear = [_yearViewController.years lastObject];
         
-        [self showLoading:YES animated:NO];
-        [[SSDataController shared] requestEventCountWithStartYear:firstYear.value StartMonth:1 EndYear:lastYear.value EndMonth:lastYear.months.count];
+        //[self showLoading:YES animated:NO];
+        //[[SSDataController shared] requestEventCountWithStartYear:firstYear.value StartMonth:1 EndYear:lastYear.value EndMonth:lastYear.months.count];
     }
     else
     {
@@ -164,7 +164,7 @@
 
 #pragma mark - NotificationObserver Methods
 
-- (void)notificationReceived:(NSNotification *)notification
+/*- (void)notificationReceived:(NSNotification *)notification
 {
     NSDictionary *userInfo = [notification userInfo];
     
@@ -186,6 +186,6 @@
             }
         }
     }
-}
+}*/
 
 @end
