@@ -38,6 +38,8 @@
     _yearView.delegate = self;
     
     _dataSource.years = _years;
+
+    [self refresh];
 }
 
 

@@ -24,6 +24,8 @@
     _yearView.delegate = self;
     
     _dataSource.years = [SSDataController shared].calendarYears;
+
+    [self refresh];
 }
 
 
