@@ -1,21 +1,21 @@
 //
-//  SSCalendarMonthView.m
+//  SSCalendarMonthlyDataSource.h
 //  Pods
 //
 //  Created by Steven Preston on 7/23/13.
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-#import "SSCalendarMonthViewController.h"
-#import "SSCalendarMonthHeaderView.h"
-#import "SSCalendarDayCell.h"
+#import "SSCalendarMonthlyDataSource.h"
+#import "SSCalendarMonthlyHeaderView.h"
 #import "SSCalendarMonthlyLayout.h"
+#import "SSCalendarDayCell.h"
 #import "SSCalendarUtils.h"
 #import "SSYearNode.h"
 #import "SSMonthNode.h"
 #import "SSDayNode.h"
 
-@implementation SSCalendarMonthViewController
+@implementation SSCalendarMonthlyDataSource
 
 
 - (id)initWithView:(UICollectionView *)view
@@ -27,7 +27,7 @@
         _view.collectionViewLayout = [[SSCalendarMonthlyLayout alloc] init];
 
         [view registerNib:[UINib nibWithNibName:@"SSCalendarDayCell" bundle:nil] forCellWithReuseIdentifier:@"DayCell"];
-        [view registerNib:[UINib nibWithNibName:@"SSCalendarMonthHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MonthHeaderView"];
+        [view registerNib:[UINib nibWithNibName:@"SSCalendarMonthlyHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MonthlyHeaderView"];
     }
     return self;
 }
@@ -60,7 +60,7 @@
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    SSCalendarMonthHeaderView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MonthHeaderView" forIndexPath:indexPath];
+    SSCalendarMonthlyHeaderView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MonthlyHeaderView" forIndexPath:indexPath];
    
     
     NSInteger yearIndex = indexPath.section / 12;

@@ -7,7 +7,6 @@
 //
 
 #import "SSCalendarAnnualCell.h"
-#import "SSCalendarMonthViewController.h"
 #import "SSMonthNode.h"
 #import "SSDayNode.h"
 #import "SSCalendarUtils.h"

@@ -7,7 +7,7 @@
 //
 
 #import "SSCalendarMonthlyViewController.h"
-#import "SSCalendarMonthViewController.h"
+#import "SSCalendarMonthlyDataSource.h"
 #import "SSCalendarDailyViewController.h"
 #import "SSCalendarDayCell.h"
 #import "SSCalendarUtils.h"
@@ -33,11 +33,11 @@
     separatorView.backgroundColor = [UIColor colorWithHexString:COLOR_SEPARATOR];
     separatorViewHeightConstraint.constant = [SSDimensions onePixel];
 
-    self.yearViewController = [[SSCalendarMonthViewController alloc] initWithView:_yearView];
-    _yearView.dataSource = _yearViewController;
+    self.dataSource = [[SSCalendarMonthlyDataSource alloc] initWithView:_yearView];
+    _yearView.dataSource = _dataSource;
     _yearView.delegate = self;
     
-    _yearViewController.years = _years;
+    _dataSource.years = _years;
 }
 
 
@@ -58,7 +58,7 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    [_yearViewController updateLayoutForBounds:_yearView.bounds];
+    [_dataSource updateLayoutForBounds:_yearView.bounds];
     
     if (_startingIndexPath != nil)
     {
@@ -73,8 +73,8 @@
     SSCalendarCountCache *calendarCounts = [[SSDataController shared] cachedCalendarCount];
     if (calendarCounts == nil)
     {
-        SSYearNode *firstYear = [_yearViewController.years objectAtIndex:0];
-        SSYearNode *lastYear = [_yearViewController.years lastObject];
+        SSYearNode *firstYear = [_dataSource.years objectAtIndex:0];
+        SSYearNode *lastYear = [_dataSource.years lastObject];
         
         //[self showLoading:YES animated:NO];
         //[[SSDataController shared] requestEventCountWithStartYear:firstYear.value StartMonth:1 EndYear:lastYear.value EndMonth:lastYear.months.count];

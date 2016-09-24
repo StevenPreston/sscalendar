@@ -8,7 +8,7 @@
 
 //#import "SSContentViewController.h"
 
-@class SSCalendarMonthViewController;
+@class SSCalendarMonthlyDataSource;
 
 @interface SSCalendarMonthlyViewController : UIViewController <UICollectionViewDelegate>
 {
@@ -20,7 +20,7 @@
 @property (nonatomic, copy) NSArray *years;
 @property (nonatomic, strong) NSIndexPath *startingIndexPath;
 @property (nonatomic, strong) IBOutlet UICollectionView *yearView;
-@property (nonatomic, strong) SSCalendarMonthViewController *yearViewController;
+@property (nonatomic, strong) SSCalendarMonthlyDataSource *dataSource;
 
 - (IBAction)todayPressed:(id)sender;
 

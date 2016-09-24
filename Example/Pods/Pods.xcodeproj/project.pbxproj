@@ -70,14 +70,14 @@
 		599E29B21D9602610019902D /* SSCalendarWeekLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E297A1D9602610019902D /* SSCalendarWeekLayout.m */; };
 		599E29B31D9602610019902D /* SSCalendarDailyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E297C1D9602610019902D /* SSCalendarDailyViewController.h */; };
 		599E29B41D9602610019902D /* SSCalendarDailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E297D1D9602610019902D /* SSCalendarDailyViewController.m */; };
-		599E29B71D9602610019902D /* SSCalendarMonthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29861D9602610019902D /* SSCalendarMonthViewController.h */; };
-		599E29B81D9602610019902D /* SSCalendarMonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29871D9602610019902D /* SSCalendarMonthViewController.m */; };
+		599E29B71D9602610019902D /* SSCalendarMonthlyDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29861D9602610019902D /* SSCalendarMonthlyDataSource.h */; };
+		599E29B81D9602610019902D /* SSCalendarMonthlyDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29871D9602610019902D /* SSCalendarMonthlyDataSource.m */; };
 		599E29B91D9602610019902D /* SSCalendarMonthlyLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29891D9602610019902D /* SSCalendarMonthlyLayout.h */; };
 		599E29BA1D9602610019902D /* SSCalendarMonthlyLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E298A1D9602610019902D /* SSCalendarMonthlyLayout.m */; };
 		599E29BB1D9602610019902D /* SSCalendarMonthlyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E298C1D9602610019902D /* SSCalendarMonthlyViewController.h */; };
 		599E29BC1D9602610019902D /* SSCalendarMonthlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E298D1D9602610019902D /* SSCalendarMonthlyViewController.m */; };
-		599E29BD1D9602610019902D /* SSCalendarMonthHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29901D9602610019902D /* SSCalendarMonthHeaderView.h */; };
-		599E29BE1D9602610019902D /* SSCalendarMonthHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29911D9602610019902D /* SSCalendarMonthHeaderView.m */; };
+		599E29BD1D9602610019902D /* SSCalendarMonthlyHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29901D9602610019902D /* SSCalendarMonthlyHeaderView.h */; };
+		599E29BE1D9602610019902D /* SSCalendarMonthlyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29911D9602610019902D /* SSCalendarMonthlyHeaderView.m */; };
 		599E29BF1D9602610019902D /* SSCalendarAnnualDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29961D9602610019902D /* SSCalendarAnnualDataSource.h */; };
 		599E29C01D9602610019902D /* SSCalendarAnnualDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 599E29971D9602610019902D /* SSCalendarAnnualDataSource.m */; };
 		599E29C11D9602610019902D /* SSCalendarAnnualLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E29991D9602610019902D /* SSCalendarAnnualLayout.h */; };
@@ -273,16 +273,16 @@
 		599E297C1D9602610019902D /* SSCalendarDailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarDailyViewController.h; sourceTree = "<group>"; };
 		599E297D1D9602610019902D /* SSCalendarDailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarDailyViewController.m; sourceTree = "<group>"; };
 		599E297E1D9602610019902D /* SSCalendarDailyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSCalendarDailyViewController.xib; sourceTree = "<group>"; };
-		599E29861D9602610019902D /* SSCalendarMonthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarMonthViewController.h; sourceTree = "<group>"; };
-		599E29871D9602610019902D /* SSCalendarMonthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarMonthViewController.m; sourceTree = "<group>"; };
+		599E29861D9602610019902D /* SSCalendarMonthlyDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarMonthlyDataSource.h; sourceTree = "<group>"; };
+		599E29871D9602610019902D /* SSCalendarMonthlyDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarMonthlyDataSource.m; sourceTree = "<group>"; };
 		599E29891D9602610019902D /* SSCalendarMonthlyLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarMonthlyLayout.h; sourceTree = "<group>"; };
 		599E298A1D9602610019902D /* SSCalendarMonthlyLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarMonthlyLayout.m; sourceTree = "<group>"; };
 		599E298C1D9602610019902D /* SSCalendarMonthlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarMonthlyViewController.h; sourceTree = "<group>"; };
 		599E298D1D9602610019902D /* SSCalendarMonthlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarMonthlyViewController.m; sourceTree = "<group>"; };
 		599E298E1D9602610019902D /* SSCalendarMonthlyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSCalendarMonthlyViewController.xib; sourceTree = "<group>"; };
-		599E29901D9602610019902D /* SSCalendarMonthHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarMonthHeaderView.h; sourceTree = "<group>"; };
-		599E29911D9602610019902D /* SSCalendarMonthHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarMonthHeaderView.m; sourceTree = "<group>"; };
-		599E29921D9602610019902D /* SSCalendarMonthHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSCalendarMonthHeaderView.xib; sourceTree = "<group>"; };
+		599E29901D9602610019902D /* SSCalendarMonthlyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarMonthlyHeaderView.h; sourceTree = "<group>"; };
+		599E29911D9602610019902D /* SSCalendarMonthlyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarMonthlyHeaderView.m; sourceTree = "<group>"; };
+		599E29921D9602610019902D /* SSCalendarMonthlyHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSCalendarMonthlyHeaderView.xib; sourceTree = "<group>"; };
 		599E29961D9602610019902D /* SSCalendarAnnualDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarAnnualDataSource.h; sourceTree = "<group>"; };
 		599E29971D9602610019902D /* SSCalendarAnnualDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCalendarAnnualDataSource.m; sourceTree = "<group>"; };
 		599E29991D9602610019902D /* SSCalendarAnnualLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCalendarAnnualLayout.h; sourceTree = "<group>"; };
@@ -617,8 +617,8 @@
 		599E29851D9602610019902D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				599E29861D9602610019902D /* SSCalendarMonthViewController.h */,
-				599E29871D9602610019902D /* SSCalendarMonthViewController.m */,
+				599E29861D9602610019902D /* SSCalendarMonthlyDataSource.h */,
+				599E29871D9602610019902D /* SSCalendarMonthlyDataSource.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -645,9 +645,9 @@
 		599E298F1D9602610019902D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				599E29901D9602610019902D /* SSCalendarMonthHeaderView.h */,
-				599E29911D9602610019902D /* SSCalendarMonthHeaderView.m */,
-				599E29921D9602610019902D /* SSCalendarMonthHeaderView.xib */,
+				599E29901D9602610019902D /* SSCalendarMonthlyHeaderView.h */,
+				599E29911D9602610019902D /* SSCalendarMonthlyHeaderView.m */,
+				599E29921D9602610019902D /* SSCalendarMonthlyHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1000,9 +1000,9 @@
 				59F62A821D930304009CB214 /* SSMonthNode.h in Headers */,
 				599E29471D94C1770019902D /* SSDimensions.h in Headers */,
 				599E29C11D9602610019902D /* SSCalendarAnnualLayout.h in Headers */,
-				599E29BD1D9602610019902D /* SSCalendarMonthHeaderView.h in Headers */,
+				599E29BD1D9602610019902D /* SSCalendarMonthlyHeaderView.h in Headers */,
 				599E29B31D9602610019902D /* SSCalendarDailyViewController.h in Headers */,
-				599E29B71D9602610019902D /* SSCalendarMonthViewController.h in Headers */,
+				599E29B71D9602610019902D /* SSCalendarMonthlyDataSource.h in Headers */,
 				599E29551D94C8250019902D /* SSCalendarCache.h in Headers */,
 				599E29A51D9602610019902D /* SSCalendarEventTableViewCell.h in Headers */,
 				599E294B1D94C47B0019902D /* UIColor+StellarAdditions.h in Headers */,
@@ -1278,14 +1278,14 @@
 				599E29A81D9602610019902D /* SSCalendarDayViewController.m in Sources */,
 				599E29601D94CA540019902D /* SSDataController.m in Sources */,
 				599E29A61D9602610019902D /* SSCalendarEventTableViewCell.m in Sources */,
-				599E29B81D9602610019902D /* SSCalendarMonthViewController.m in Sources */,
+				599E29B81D9602610019902D /* SSCalendarMonthlyDataSource.m in Sources */,
 				599E29581D94C8250019902D /* SSCalendarCountCache.m in Sources */,
 				599E29441D94C16A0019902D /* SSStyles.m in Sources */,
 				599E29641D94CE1D0019902D /* StellarConversionUtils.m in Sources */,
 				599E29B01D9602610019902D /* SSCalendarDayLayout.m in Sources */,
 				582D0B50B66827AF566B661DD558AB0E /* SSCalendar-dummy.m in Sources */,
 				599E29AE1D9602610019902D /* SSCalendarWeekViewController.m in Sources */,
-				599E29BE1D9602610019902D /* SSCalendarMonthHeaderView.m in Sources */,
+				599E29BE1D9602610019902D /* SSCalendarMonthlyHeaderView.m in Sources */,
 				59F62A811D930304009CB214 /* SSEvent.m in Sources */,
 				599E29CB1D96039B0019902D /* SSCalendarAnnualCell.m in Sources */,
 				59F62A7F1D930304009CB214 /* SSDayNode.m in Sources */,
