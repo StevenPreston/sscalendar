@@ -8,7 +8,7 @@
 
 #import "SSCalendarAnnualViewController.h"
 #import "SSCalendarMonthlyViewController.h"
-#import "SSCalendarYearViewController.h"
+#import "SSCalendarAnnualDataSource.h"
 #import "SSYearNode.h"
 #import "SSMonthNode.h"
 #import "SSCalendarUtils.h"
@@ -19,11 +19,11 @@
 {
     [super viewDidLoad];
     
-    self.yearViewController = [[SSCalendarYearViewController alloc] initWithView:_yearView];
-    _yearView.dataSource = _yearViewController;
+    self.dataSource = [[SSCalendarAnnualDataSource alloc] initWithView:_yearView];
+    _yearView.dataSource = _dataSource;
     _yearView.delegate = self;
     
-    _yearViewController.years = [SSDataController shared].calendarYears;
+    _dataSource.years = [SSDataController shared].calendarYears;
 }
 
 
@@ -32,8 +32,8 @@
     SSCalendarCountCache *calendarCounts = [[SSDataController shared] cachedCalendarCount];
     if (calendarCounts == nil)
     {
-        SSYearNode *firstYear = [_yearViewController.years objectAtIndex:0];
-        SSYearNode *lastYear = [_yearViewController.years lastObject];
+        SSYearNode *firstYear = [_dataSource.years objectAtIndex:0];
+        SSYearNode *lastYear = [_dataSource.years lastObject];
         
         //[self showLoading:YES animated:NO];
         //[[SSDataController shared] requestEventCountWithStartYear:firstYear.value StartMonth:1 EndYear:lastYear.value EndMonth:lastYear.months.count];
@@ -50,7 +50,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SSYearNode *year = [_yearViewController.years objectAtIndex:indexPath.section];
+    SSYearNode *year = [_dataSource.years objectAtIndex:indexPath.section];
     
     SSCalendarMonthlyViewController *viewController = [[SSCalendarMonthlyViewController alloc] initWithNibName:@"SSCalendarMonthlyViewController" bundle:nil];
     
@@ -58,7 +58,7 @@
     NSIndexPath *startingIndexPath = [NSIndexPath indexPathForRow:0 inSection:section];
     
     viewController.startingIndexPath = startingIndexPath;
-    viewController.years = _yearViewController.years;
+    viewController.years = _dataSource.years;
 
     [self.navigationController pushViewController:viewController animated:YES];
 }

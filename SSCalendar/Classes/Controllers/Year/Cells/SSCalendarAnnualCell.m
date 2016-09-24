@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-#import "SSCalendarMonthCell.h"
+#import "SSCalendarAnnualCell.h"
 #import "SSCalendarMonthViewController.h"
 #import "SSMonthNode.h"
 #import "SSDayNode.h"
 #import "SSCalendarUtils.h"
 
-@implementation SSCalendarMonthCell
+@implementation SSCalendarAnnualCell
 
 - (void)setMonth:(SSMonthNode *)month
 {

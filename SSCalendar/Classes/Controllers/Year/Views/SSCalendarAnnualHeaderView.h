@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-@interface SSCalendarYearHeaderView : UICollectionReusableView
+@interface SSCalendarAnnualHeaderView : UICollectionReusableView
 {
     IBOutlet UIView *separatorView;
     IBOutlet NSLayoutConstraint *separatorViewHeightConstraint;

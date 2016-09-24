@@ -1,20 +1,20 @@
 //
-//  SSCalendarYearViewController.m
+//  SSCalendarAnnualDataSource.m
 //  Pods
 //
 //  Created by Steven Preston on 7/29/13.
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-#import "SSCalendarYearViewController.h"
-#import "SSCalendarYearHeaderView.h"
+#import "SSCalendarAnnualDataSource.h"
+#import "SSCalendarAnnualHeaderView.h"
 #import "SSCalendarAnnualLayout.h"
-#import "SSCalendarMonthCell.h"
+#import "SSCalendarAnnualCell.h"
 #import "SSCalendarMonthViewController.h"
 #import "SSCalendarUtils.h"
 #import "SSYearNode.h"
 
-@implementation SSCalendarYearViewController
+@implementation SSCalendarAnnualDataSource
 
 - (id)initWithView:(UICollectionView *)view
 {
@@ -24,8 +24,8 @@
         self.view = view;
         _view.collectionViewLayout = [[SSCalendarAnnualLayout alloc] init];
         
-        [view registerNib:[UINib nibWithNibName:@"SSCalendarMonthCell" bundle:nil] forCellWithReuseIdentifier:@"MonthCell"];
-        [view registerNib:[UINib nibWithNibName:@"SSCalendarYearHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"YearHeaderView"];
+        [view registerNib:[UINib nibWithNibName:@"SSCalendarAnnualCell" bundle:nil] forCellWithReuseIdentifier:@"AnnualCell"];
+        [view registerNib:[UINib nibWithNibName:@"SSCalendarAnnualHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"AnnualHeaderView"];
     }
     return self;
 }
@@ -50,7 +50,7 @@
 {
     SSYearNode *year = [_years objectAtIndex:indexPath.section];
     
-    SSCalendarYearHeaderView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"YearHeaderView" forIndexPath:indexPath];
+    SSCalendarAnnualHeaderView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"AnnualHeaderView" forIndexPath:indexPath];
     view.label.text = [NSString stringWithFormat:@"%li", (long)year.value];
     return view;
 }
@@ -60,8 +60,8 @@
 {
     SSYearNode *year = [_years objectAtIndex:indexPath.section];
     
-    static NSString *CellIdentifier = @"MonthCell";
-    SSCalendarMonthCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"AnnualCell";
+    SSCalendarAnnualCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.month = [year.months objectAtIndex:indexPath.row];
     return cell;

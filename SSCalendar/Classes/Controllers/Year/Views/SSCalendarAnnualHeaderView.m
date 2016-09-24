@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-#import "SSCalendarYearHeaderView.h"
+#import "SSCalendarAnnualHeaderView.h"
 
-@implementation SSCalendarYearHeaderView
+@implementation SSCalendarAnnualHeaderView
 
 - (void)awakeFromNib
 {

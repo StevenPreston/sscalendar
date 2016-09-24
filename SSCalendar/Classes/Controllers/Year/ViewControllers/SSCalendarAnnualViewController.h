@@ -8,11 +8,11 @@
 
 //#import "SSContentViewController.h"
 
-@class SSCalendarYearViewController;
+@class SSCalendarAnnualDataSource;
 
 @interface SSCalendarAnnualViewController : UIViewController <UICollectionViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UICollectionView *yearView;
-@property (nonatomic, strong) SSCalendarYearViewController *yearViewController;
+@property (nonatomic, strong) SSCalendarAnnualDataSource *dataSource;
 
 @end
