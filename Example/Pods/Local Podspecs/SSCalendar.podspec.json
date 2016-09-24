@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "SSCalendar/Classes/**/*"
+  "source_files": "SSCalendar/Classes/**/*",
+  "resource_bundles": {
+    "SSCalendar": [
+      "SSCalendar/Classes/**/*.xib"
+    ]
+  }
 }

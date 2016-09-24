@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import SSCalendar
 
 class ViewController: UIViewController {
+
+    @IBOutlet var button: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBAction func buttonTapped(sender: AnyObject?) {
 
+        let podBundle = NSBundle(forClass: SSCalendarAnnualViewController.self)
+        let bundleURL = podBundle.URLForResource("SSCalendar", withExtension: "bundle")
+        let bundle = NSBundle(URL: bundleURL!)!
+
+        let annualViewController = SSCalendarAnnualViewController(nibName: "SSCalendarAnnualViewController", bundle: bundle)
+        let navigationController = UINavigationController(rootViewController: annualViewController)
+        self.presentViewController(navigationController, animated: true, completion: nil)
+    }
 }
 
