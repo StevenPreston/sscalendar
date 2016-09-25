@@ -8,7 +8,7 @@
 
 #import "SSCalendarDayCell.h"
 #import "SSDayNode.h"
-#import "SSCalendarUtils.h"
+#import "SSConstants.h"
 
 /**
  * Private class for selected background view.

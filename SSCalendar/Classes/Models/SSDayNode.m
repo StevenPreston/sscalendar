@@ -8,6 +8,7 @@
 
 #import "SSDayNode.h"
 #import "SSCalendarUtils.h"
+#import "SSDataController.h"
 
 @implementation SSDayNode
 

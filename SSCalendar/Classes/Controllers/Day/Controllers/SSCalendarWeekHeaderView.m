@@ -7,6 +7,7 @@
 //
 
 #import "SSCalendarWeekHeaderView.h"
+#import "SSConstants.h"
 
 @implementation SSCalendarWeekHeaderView
 

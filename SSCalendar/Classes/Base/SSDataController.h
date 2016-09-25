@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-#import "SSCache.h"
-#import "SSCalendarCountCache.h"
+@class SSCache, SSCalendarCountCache;
 
 @interface SSDataController : NSObject
 {

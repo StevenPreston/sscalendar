@@ -9,7 +9,7 @@
 #import "SSCalendarAnnualCell.h"
 #import "SSMonthNode.h"
 #import "SSDayNode.h"
-#import "SSCalendarUtils.h"
+#import "SSConstants.h"
 
 @implementation SSCalendarAnnualCell
 

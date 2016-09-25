@@ -10,10 +10,10 @@
 #import "SSCalendarMonthlyHeaderView.h"
 #import "SSCalendarMonthlyLayout.h"
 #import "SSCalendarDayCell.h"
-#import "SSCalendarUtils.h"
 #import "SSYearNode.h"
 #import "SSMonthNode.h"
 #import "SSDayNode.h"
+#import "SSConstants.h"
 
 @implementation SSCalendarMonthlyDataSource
 

@@ -10,7 +10,7 @@
 #import "SSCalendarDayLayout.h"
 #import "SSCalendarEventsCell.h"
 #import "SSDayNode.h"
-#import "SSCalendarUtils.h"
+#import "SSConstants.h"
 
 @implementation SSCalendarDayViewController
 

@@ -9,9 +9,9 @@
 #import "SSCalendarWeekViewController.h"
 #import "SSCalendarWeekLayout.h"
 #import "SSCalendarDayCell.h"
-#import "SSCalendarUtils.h"
 #import "SSYearNode.h"
 #import "SSDayNode.h"
+#import "SSConstants.h"
 
 @implementation SSCalendarWeekViewController
 

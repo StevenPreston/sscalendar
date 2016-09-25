@@ -10,8 +10,8 @@
 #import "SSCalendarAnnualHeaderView.h"
 #import "SSCalendarAnnualLayout.h"
 #import "SSCalendarAnnualCell.h"
-#import "SSCalendarUtils.h"
 #import "SSYearNode.h"
+#import "SSConstants.h"
 
 @implementation SSCalendarAnnualDataSource
 

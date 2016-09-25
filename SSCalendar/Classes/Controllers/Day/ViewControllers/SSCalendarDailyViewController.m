@@ -12,8 +12,8 @@
 #import "SSCalendarDayViewController.h"
 #import "SSCalendarWeekViewController.h"
 #import "SSCalendarWeekHeaderView.h"
-#import "SSCalendarUtils.h"
 #import "SSDayNode.h"
+#import "SSConstants.h"
 
 @interface SSCalendarDailyViewController()
 

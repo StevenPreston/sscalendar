@@ -7,6 +7,8 @@
 //
 
 #import "SSCalendarCache.h"
+#import "SSCache.h"
+#import "SSEvent.h"
 #import "SSCalendarUtils.h"
 
 @interface SSCalendarCache()

@@ -7,6 +7,8 @@
 //
 
 #import "SSCalendarEventTableViewCell.h"
+#import "SSEvent.h"
+#import "SSConstants.h"
 
 @implementation SSCalendarEventTableViewCell
 

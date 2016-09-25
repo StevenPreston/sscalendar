@@ -6,7 +6,7 @@
 //
 //
 
-#import "SSStyles.h"
+#import "SSConstants.h"
 
 @implementation SSStyles
 
