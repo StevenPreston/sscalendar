@@ -25,8 +25,7 @@
 - (id)init
 {
     self = [super init];
-    if (self)
-    {
+    if (self) {
         [self awakeFromNib];
     }
     return self;

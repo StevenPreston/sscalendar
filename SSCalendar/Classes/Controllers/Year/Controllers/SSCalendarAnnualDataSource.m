@@ -18,8 +18,7 @@
 - (id)initWithView:(UICollectionView *)view
 {
     self = [super init];
-    if (self)
-    {
+    if (self) {
         self.view = view;
         _view.collectionViewLayout = [[SSCalendarAnnualLayout alloc] init];
 
@@ -41,14 +40,14 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    SSYearNode *year = [_years objectAtIndex:section];
+    SSYearNode *year = _years[section];
     return year.months.count;
 }
 
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    SSYearNode *year = [_years objectAtIndex:indexPath.section];
+    SSYearNode *year = _years[indexPath.section];
     
     SSCalendarAnnualHeaderView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"AnnualHeaderView" forIndexPath:indexPath];
     view.label.text = [NSString stringWithFormat:@"%li", (long)year.value];
@@ -58,12 +57,12 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SSYearNode *year = [_years objectAtIndex:indexPath.section];
+    SSYearNode *year = _years[indexPath.section];
     
     static NSString *CellIdentifier = @"AnnualCell";
     SSCalendarAnnualCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.month = [year.months objectAtIndex:indexPath.row];
+    cell.month = year.months[indexPath.row];
     return cell;
 }
 

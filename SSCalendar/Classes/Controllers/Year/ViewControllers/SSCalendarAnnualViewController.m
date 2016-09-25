@@ -33,16 +33,13 @@
 - (void)refresh
 {
     SSCalendarCountCache *calendarCounts = [[SSDataController shared] cachedCalendarCount];
-    if (calendarCounts == nil)
-    {
-        SSYearNode *firstYear = [_dataSource.years objectAtIndex:0];
+    if (calendarCounts == nil) {
+        SSYearNode *firstYear = _dataSource.years[0];
         SSYearNode *lastYear = [_dataSource.years lastObject];
         
         //[self showLoading:YES animated:NO];
         //[[SSDataController shared] requestEventCountWithStartYear:firstYear.value StartMonth:1 EndYear:lastYear.value EndMonth:lastYear.months.count];
-    }
-    else
-    {
+    } else {
         [[SSDataController shared] updateCalendarYears];
         [_yearView reloadData];
     }

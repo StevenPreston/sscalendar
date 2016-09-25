@@ -19,10 +19,10 @@
     [self setNeedsDisplay];
 }
 
-
 - (void)drawRect:(CGRect)rect
 {
-    NSDateComponents *today = [[SSCalendarUtils calendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
+    NSDateComponents *today = [[SSCalendarUtils calendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay
+                                                            fromDate:[NSDate date]];
     
     [super drawRect:rect];
     
@@ -31,28 +31,23 @@
     
     CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:COLOR_SECONDARY].CGColor);
     
-    NSString *title = [[[[[NSDateFormatter alloc] init] shortMonthSymbols] objectAtIndex:_month.value - 1] uppercaseString];
+    NSString *title = [[[[NSDateFormatter alloc] init] shortMonthSymbols][_month.value - 1] uppercaseString];
     [title drawAtPoint:CGPointMake(0, -2.0f) withAttributes:@{ NSFontAttributeName: [SSStyles lightFontOfSize:14.0f] }];
     
     CGFloat headerHeight = 17.0f;
-    for (SSDayNode *day in _month.dayNodes)
-    {
+    for (SSDayNode *day in _month.dayNodes) {
         CGFloat x = day.weekday % 7 * 13.0f;
         CGFloat y = headerHeight + (day.value + _month.weekdayOfFirstDay - 1) / 7 * 15.0f;
         rect = CGRectMake(x, y, 13.0f, 13.0f);
         
-        if ([day isEqualToDateComponents:today])
-        {
+        if ([day isEqualToDateComponents:today]) {
             CGContextAddEllipseInRect(context, rect);
             CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:COLOR_SECONDARY].CGColor);
             CGContextFillPath(context);
             
             CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
-        }
-        else
-        {
-            if (day.hasEvents > 0)
-            {
+        } else {
+            if (day.hasEvents > 0) {
                 CGContextAddEllipseInRect(context, rect);
                 CGContextSetStrokeColorWithColor(context, [UIColor colorWithHexString:COLOR_SECONDARY].CGColor);
                 CGContextDrawPath(context, kCGPathStroke);
