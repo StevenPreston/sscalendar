@@ -22,9 +22,10 @@
     {
         self.view = view;
         _view.collectionViewLayout = [[SSCalendarAnnualLayout alloc] init];
-        
-        [view registerNib:[UINib nibWithNibName:@"SSCalendarAnnualCell" bundle:nil] forCellWithReuseIdentifier:@"AnnualCell"];
-        [view registerNib:[UINib nibWithNibName:@"SSCalendarAnnualHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"AnnualHeaderView"];
+
+        NSBundle *bundle = [SSCalendarUtils calendarBundle];
+        [view registerNib:[UINib nibWithNibName:@"SSCalendarAnnualCell" bundle:bundle] forCellWithReuseIdentifier:@"AnnualCell"];
+        [view registerNib:[UINib nibWithNibName:@"SSCalendarAnnualHeaderView" bundle:bundle] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"AnnualHeaderView"];
     }
     return self;
 }

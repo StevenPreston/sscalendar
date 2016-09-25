@@ -19,12 +19,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonTapped(sender: AnyObject?) {
-
-        let podBundle = NSBundle(forClass: SSCalendarAnnualViewController.self)
-        let bundleURL = podBundle.URLForResource("SSCalendar", withExtension: "bundle")
-        let bundle = NSBundle(URL: bundleURL!)!
-
-        let annualViewController = SSCalendarAnnualViewController(nibName: "SSCalendarAnnualViewController", bundle: bundle)
+        let annualViewController = SSCalendarAnnualViewController(nibName: "SSCalendarAnnualViewController", bundle: SSCalendarUtils.calendarBundle()!)
         let navigationController = UINavigationController(rootViewController: annualViewController)
         self.presentViewController(navigationController, animated: true, completion: nil)
     }

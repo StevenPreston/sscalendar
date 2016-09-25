@@ -16,7 +16,6 @@
 - (void)requestEventsWithYear:(NSInteger)year Month:(NSInteger)month DistrictId:(NSString *)districtId BuildingId:(NSString *)buildingId;
 - (void)requestEventCountWithStartYear:(NSInteger)startYear StartMonth:(NSInteger)startMonth EndYear:(NSInteger)endYear EndMonth:(NSInteger)endMonth DistrictId:(NSString *)districtId BuildingId:(NSString *)buildingId;
 - (void)requestNewsWithUrl:(NSString *)url DistrictId:(NSString *)districtId BuildingId:(NSString *)buildingId;
-- (void)loadData;
 - (NSString *)keyForDistrictId:(NSString *)districtId BuildingId:(NSString *)buildingId;
 - (void)storeItems:(NSArray *)items inCache:(NSCache *)cache withKey:(NSString *)key;
 
@@ -48,10 +47,8 @@
     self = [super init];
     if (self)
     {
-        eventsRequests = [NSMutableArray array];
         self.calendars = [[SSCache alloc] init];
         self.calendarCounts = [[SSCache alloc] init];
-        [self loadData];
     }
     return self;
 }

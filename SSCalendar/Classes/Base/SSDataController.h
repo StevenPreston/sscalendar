@@ -11,7 +11,6 @@
 
 @interface SSDataController : NSObject
 {
-    NSMutableArray *eventsRequests;
     BOOL requestingInfo;
 }
 

@@ -10,6 +10,14 @@
 
 @implementation SSCalendarUtils
 
+
++ (NSBundle *)calendarBundle
+{
+    NSBundle *podBundle = [NSBundle bundleForClass:SSCalendarUtils.self];
+    NSURL *bundleURL = [podBundle URLForResource:@"SSCalendar" withExtension:@"bundle"];
+    return [NSBundle bundleWithURL:bundleURL];
+}
+
 + (NSCalendar *)calendar
 {
     return [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];

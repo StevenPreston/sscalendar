@@ -22,10 +22,9 @@
     self.dataSource = [[SSCalendarAnnualDataSource alloc] initWithView:_yearView];
     _yearView.dataSource = _dataSource;
     _yearView.delegate = self;
-    
-    _dataSource.years = [SSDataController shared].calendarYears;
 
-    [self refresh];
+    _dataSource.years = [SSDataController shared].calendarYears;
+    //[self refresh];
 }
 
 
