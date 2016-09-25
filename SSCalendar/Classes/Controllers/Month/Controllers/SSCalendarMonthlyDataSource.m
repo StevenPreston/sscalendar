@@ -26,8 +26,9 @@
         self.view = view;
         _view.collectionViewLayout = [[SSCalendarMonthlyLayout alloc] init];
 
-        [view registerNib:[UINib nibWithNibName:@"SSCalendarDayCell" bundle:nil] forCellWithReuseIdentifier:@"DayCell"];
-        [view registerNib:[UINib nibWithNibName:@"SSCalendarMonthlyHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MonthlyHeaderView"];
+        NSBundle *bundle = [SSCalendarUtils calendarBundle];
+        [view registerNib:[UINib nibWithNibName:@"SSCalendarDayCell" bundle:bundle] forCellWithReuseIdentifier:@"DayCell"];
+        [view registerNib:[UINib nibWithNibName:@"SSCalendarMonthlyHeaderView" bundle:bundle] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MonthlyHeaderView"];
     }
     return self;
 }

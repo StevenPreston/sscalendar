@@ -141,8 +141,9 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
     SSCalendarDayCell *cell = (SSCalendarDayCell *) [collectionView cellForItemAtIndexPath:indexPath];
-    
-    SSCalendarDailyViewController *viewController = [[SSCalendarDailyViewController alloc] initWithNibName:@"SSCalendarDailyViewController" bundle:nil];
+
+    NSBundle *bundle = [SSCalendarUtils calendarBundle];
+    SSCalendarDailyViewController *viewController = [[SSCalendarDailyViewController alloc] initWithNibName:@"SSCalendarDailyViewController" bundle:bundle];
     viewController.years = _years;
     viewController.day = cell.day;
     [self.navigationController pushViewController:viewController animated:YES];

@@ -9,6 +9,7 @@
 #import "SSCalendarWeekViewController.h"
 #import "SSCalendarWeekLayout.h"
 #import "SSCalendarDayCell.h"
+#import "SSCalendarUtils.h"
 #import "SSYearNode.h"
 #import "SSDayNode.h"
 
@@ -26,8 +27,9 @@
         view.collectionViewLayout = [[SSCalendarWeekLayout alloc] init];
         view.pagingEnabled = YES;
         view.allowsMultipleSelection = NO;
-        
-        [view registerNib:[UINib nibWithNibName:@"SSCalendarDayCell" bundle:nil] forCellWithReuseIdentifier:@"DayCell"];
+
+        NSBundle *bundle = [SSCalendarUtils calendarBundle];
+        [view registerNib:[UINib nibWithNibName:@"SSCalendarDayCell" bundle:bundle] forCellWithReuseIdentifier:@"DayCell"];
     }
     return self;
 }

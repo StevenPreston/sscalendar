@@ -51,9 +51,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SSYearNode *year = [_dataSource.years objectAtIndex:indexPath.section];
-    
-    SSCalendarMonthlyViewController *viewController = [[SSCalendarMonthlyViewController alloc] initWithNibName:@"SSCalendarMonthlyViewController" bundle:nil];
+    SSYearNode *year = _dataSource.years[indexPath.section];
+
+    NSBundle *bundle = [SSCalendarUtils calendarBundle];
+    SSCalendarMonthlyViewController *viewController = [[SSCalendarMonthlyViewController alloc] initWithNibName:@"SSCalendarMonthlyViewController" bundle:bundle];
     
     NSInteger section = indexPath.section * year.months.count + indexPath.row;
     NSIndexPath *startingIndexPath = [NSIndexPath indexPathForRow:0 inSection:section];

@@ -25,8 +25,9 @@
         
         view.collectionViewLayout = [[SSCalendarDayLayout alloc] init];
         view.pagingEnabled = YES;
-        
-        [view registerNib:[UINib nibWithNibName:@"SSCalendarEventsCell" bundle:nil] forCellWithReuseIdentifier:@"EventsCell"];
+
+        NSBundle *bundle = [SSCalendarUtils calendarBundle];
+        [view registerNib:[UINib nibWithNibName:@"SSCalendarEventsCell" bundle:bundle] forCellWithReuseIdentifier:@"EventsCell"];
     }
     return self;
 }

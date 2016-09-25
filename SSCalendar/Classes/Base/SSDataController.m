@@ -141,8 +141,11 @@
         
         SSYearNode *yearNode = [[SSYearNode alloc] initWithValue:year];
         SSYearNode *yearNode1 = [[SSYearNode alloc] initWithValue:year + 1];
+        SSYearNode *yearNode2 = [[SSYearNode alloc] initWithValue:year + 2];
+        SSYearNode *yearNode3 = [[SSYearNode alloc] initWithValue:year + 3];
+        SSYearNode *yearNode4 = [[SSYearNode alloc] initWithValue:year + 4];
         
-        self.calendarYears = @[yearNode, yearNode1];
+        self.calendarYears = @[yearNode, yearNode1,  yearNode2, yearNode3, yearNode4];
     }
     
     return _calendarYears;

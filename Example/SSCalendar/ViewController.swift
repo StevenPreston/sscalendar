@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(sender: AnyObject?) {
         let annualViewController = SSCalendarAnnualViewController(nibName: "SSCalendarAnnualViewController", bundle: SSCalendarUtils.calendarBundle()!)
         let navigationController = UINavigationController(rootViewController: annualViewController)
+        navigationController.navigationBar.translucent = false
         self.presentViewController(navigationController, animated: true, completion: nil)
     }
 }
