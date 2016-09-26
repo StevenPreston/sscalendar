@@ -6,32 +6,24 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-@class SSCache, SSCalendarCountCache;
+@class SSCalendarCache, SSCalendarCountCache;
 
 @interface SSDataController : NSObject
-{
-    BOOL requestingInfo;
-}
 
-@property (nonatomic, strong) SSCache *calendars;
-@property (nonatomic, strong) SSCache *calendarCounts;
+@property (nonatomic, strong) SSCalendarCache *calendarCache;
+@property (nonatomic, strong) SSCalendarCountCache *calendarCountCache;
 
 /** Data structure used to build and display the calendar. */
 @property (nonatomic, copy) NSArray *calendarYears;
 
 + (SSDataController *)shared;
 
-- (BOOL)isRequestingInfo;
-- (BOOL)isInfoRequestRequired;
-
 - (BOOL)areEventsLoadedForYear:(NSInteger)year Month:(NSInteger)month;
 - (BOOL)hasEventsYear:(NSInteger)year Month:(NSInteger)month Date:(NSInteger)day;
-- (BOOL)isRequestingEventsForYear:(NSInteger)year Month:(NSInteger)month;
-
 - (NSArray *)cachedEventsForYear:(NSInteger)year Month:(NSInteger)month Day:(NSInteger)day;
 - (SSCalendarCountCache *)cachedCalendarCount;
 
 /** Updates the hasEvents flag on each day within the calendar years. */
-- (void) updateCalendarYears;
+- (void)updateCalendarYears;
 
 @end
