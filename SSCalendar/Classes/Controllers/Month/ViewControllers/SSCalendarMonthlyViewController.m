@@ -74,7 +74,7 @@
 
 - (void)refresh
 {
-    SSCalendarCountCache *calendarCounts = [[SSDataController shared] cachedCalendarCount];
+    SSCalendarCountCache *calendarCounts = [SSDataController shared].calendarCountCache;
     if (calendarCounts == nil)
     {
         SSYearNode *firstYear = [_dataSource.years objectAtIndex:0];

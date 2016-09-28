@@ -17,6 +17,17 @@
 
 @implementation SSCalendarAnnualViewController
 
+
+- (id)initWithEvents:(NSArray *)events
+{
+    NSBundle *bundle = [SSCalendarUtils calendarBundle];
+    if (self = [super initWithNibName:@"SSCalendarAnnualViewController" bundle:bundle]) {
+        self.events = events;
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,24 +37,27 @@
     _yearView.delegate = self;
 
     _dataSource.years = [SSDataController shared].calendarYears;
+    [SSDataController shared].events = _events;
+
+    [_yearView reloadData];
     //[self refresh];
 }
 
 
-- (void)refresh
+/*- (void)refresh
 {
     SSCalendarCountCache *calendarCounts = [[SSDataController shared] cachedCalendarCount];
     if (calendarCounts == nil) {
         SSYearNode *firstYear = _dataSource.years[0];
         SSYearNode *lastYear = [_dataSource.years lastObject];
         
-        //[self showLoading:YES animated:NO];
-        //[[SSDataController shared] requestEventCountWithStartYear:firstYear.value StartMonth:1 EndYear:lastYear.value EndMonth:lastYear.months.count];
+        [self showLoading:YES animated:NO];
+        [[SSDataController shared] requestEventCountWithStartYear:firstYear.value StartMonth:1 EndYear:lastYear.value EndMonth:lastYear.months.count];
     } else {
         [[SSDataController shared] updateCalendarYears];
         [_yearView reloadData];
     }
-}
+}*/
 
 
 #pragma mark - UICollectionViewDelegateMethods

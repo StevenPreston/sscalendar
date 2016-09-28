@@ -20,6 +20,29 @@
 
 @implementation SSCalendarCache
 
+- (void)putEvents:(NSArray *)events
+{
+    for (SSEvent *event in events)
+    {
+        NSCalendar *calendar = [SSCalendarUtils calendar];
+        NSDateComponents *comps = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:event.startDate];
+
+        NSMutableDictionary *monthCache = [self monthDictionaryForYear:comps.year Month:comps.month createIfNil:YES];
+
+        NSNumber *dayKey = [NSNumber numberWithInteger:comps.day];
+        NSMutableArray *dayCache = [monthCache objectForKey:dayKey];
+
+        if (dayCache == nil)
+        {
+            dayCache = [NSMutableArray array];
+            [monthCache setObject:dayCache forKey:dayKey];
+        }
+
+        [dayCache addObject:event];
+    }
+}
+
+
 - (void)putEvents:(NSArray *)events ForYear:(NSInteger)year Month:(NSInteger)month
 {
     NSMutableDictionary *monthCache = [self monthDictionaryForYear:year Month:month createIfNil:YES];

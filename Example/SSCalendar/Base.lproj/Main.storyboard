@@ -18,12 +18,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcA-4z-cVe">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7h5-By-y6U"/>
-                                    <constraint firstAttribute="width" constant="46" id="hDV-SJ-tKQ"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="251" y="285" width="99" height="30"/>
+                                <state key="normal" title="View Calendar"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="f3o-DC-dmu"/>
                                 </connections>
@@ -35,12 +31,10 @@
                             <constraint firstItem="bcA-4z-cVe" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="GVy-ix-KVY"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="button" destination="bcA-4z-cVe" id="gax-hc-mEw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="629" y="464"/>
         </scene>
     </scenes>
 </document>

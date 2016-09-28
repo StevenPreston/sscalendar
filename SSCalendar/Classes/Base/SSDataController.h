@@ -25,5 +25,6 @@
 
 /** Updates the hasEvents flag on each day within the calendar years. */
 - (void)updateCalendarYears;
+- (void)setEvents:(NSArray *)events;
 
 @end

@@ -8,6 +8,7 @@
 
 @interface SSCalendarCache : NSCache
 
+- (void)putEvents:(NSArray *)events;
 - (void)putEvents:(NSArray *)events ForYear:(NSInteger)year Month:(NSInteger)month;
 - (NSArray *)getEventsForYear:(NSInteger)year Month:(NSInteger)month Day:(NSInteger)day;
 - (BOOL)areEventsLoadedForYear:(NSInteger)year Month:(NSInteger)month;

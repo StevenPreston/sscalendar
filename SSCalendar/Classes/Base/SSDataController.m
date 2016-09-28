@@ -11,6 +11,7 @@
 #import "SSCalendarCountCache.h"
 #import "SSYearNode.h"
 #import "SSDayNode.h"
+#import "SSEvent.h"
 #import "SSConstants.h"
 
 @implementation SSDataController
@@ -75,9 +76,23 @@
 - (void)updateCalendarYears {
     for (SSYearNode *year in _calendarYears) {
         for (SSDayNode *day in year.days) {
-            day.hasEvents = [[SSDataController shared] hasEventsYear:day.year Month:day.month Date:day.value];
+            day.hasEvents = [self hasEventsYear:day.year Month:day.month Date:day.value];
         }
     }
+}
+
+- (void)setEvents:(NSArray *)events {
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"startDate" ascending:YES];
+    NSArray *sortedResultsArray = [events sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+
+    NSMutableArray *dates = [NSMutableArray new];
+    for (SSEvent *event in events) {
+        [dates addObject:event.startDate];
+    }
+
+    [_calendarCountCache putDates:dates];
+    [self updateCalendarYears];
+    [_calendarCache putEvents:sortedResultsArray];
 }
 
 @end
