@@ -75,7 +75,7 @@
             cell.textLabel.textAlignment = NSTextAlignmentCenter;
             cell.textLabel.textColor = [UIColor colorWithHexString:COLOR_TEXT_DARK];
             cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
-            cell.textLabel.text = NSLocalizedString(@"EventLabelNoEvents", @"");
+            cell.textLabel.text = @"No Events";
         }
         return cell;
     }

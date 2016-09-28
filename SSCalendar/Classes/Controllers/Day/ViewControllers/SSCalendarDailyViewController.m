@@ -33,7 +33,7 @@
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = nil;
     
-    todayBarButtonItem.title = NSLocalizedString(@"EventButtonToday", @"");
+    todayBarButtonItem.title = @"Today";
     
     headerView.backgroundColor = [UIColor colorWithHexString:COLOR_BACKGROUND_OFF_WHITE];
     separatorView.backgroundColor = [UIColor colorWithHexString:COLOR_SEPARATOR];

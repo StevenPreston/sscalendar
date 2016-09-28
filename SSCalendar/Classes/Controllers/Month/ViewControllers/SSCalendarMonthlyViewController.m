@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     
-    todayBarButtonItem.title = NSLocalizedString(@"EventButtonToday", @"");
+    todayBarButtonItem.title = @"Today";
     
     separatorView.backgroundColor = [UIColor colorWithHexString:COLOR_SEPARATOR];
     separatorViewHeightConstraint.constant = [SSDimensions onePixel];
