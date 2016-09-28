@@ -12,6 +12,8 @@ import SSCalendar
 class ViewController: UIViewController {
 
     @IBAction func buttonTapped(sender: AnyObject?) {
+        SSStyles.applyNavigationBarStyles()
+
         let annualViewController = SSCalendarAnnualViewController(events: generateEvents())
         let navigationController = UINavigationController(rootViewController: annualViewController)
         navigationController.navigationBar.translucent = false

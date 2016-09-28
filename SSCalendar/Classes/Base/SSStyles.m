@@ -21,10 +21,11 @@
 + (void)applyNavigationBarStyles
 {
     [UINavigationBar appearance].barTintColor = [UIColor colorWithHexString:COLOR_BACKGROUND_OFF_WHITE];
-
+    [UINavigationBar appearance].tintColor = [UIColor colorWithHexString:COLOR_SECONDARY];
+    
     //UIBarButtonItems
     NSDictionary *attributes = @{ NSFontAttributeName:[SSStyles lightFontOfSize:17.0f],
-                                  NSForegroundColorAttributeName : [UIColor colorWithHexString:COLOR_PRIMARY] };
+                                  NSForegroundColorAttributeName : [UIColor colorWithHexString:COLOR_SECONDARY] };
     [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
 
     //UINavigationBar title.
