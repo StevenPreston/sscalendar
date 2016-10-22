@@ -12,5 +12,6 @@
 @property (nonatomic, weak) UICollectionView *view;
 
 - (id)initWithView:(UICollectionView *)view;
+- (void)updateLayoutForBounds:(CGRect)bounds;
 
 @end

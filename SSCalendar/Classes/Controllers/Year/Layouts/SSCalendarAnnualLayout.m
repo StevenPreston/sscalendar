@@ -18,7 +18,6 @@
     self.minimumInteritemSpacing = 9.0f;
     self.minimumLineSpacing = 0;
     self.sectionInset = UIEdgeInsetsMake(0, 10.0f, 0, 10.0f);
-    self.itemSize = CGSizeMake(94.0f, 108.0f);
 }
 
 
@@ -29,6 +28,13 @@
         [self awakeFromNib];
     }
     return self;
+}
+
+- (void)updateLayoutForBounds:(CGRect)bounds
+{
+
+    CGFloat width = (bounds.size.width - 10.0f - 10.0f - 9.0f - 9.0f) / 3;
+    self.itemSize = CGSizeMake(width, width + 17.0f);
 }
 
 @end

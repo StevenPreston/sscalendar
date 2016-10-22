@@ -8,4 +8,6 @@
 
 @interface SSCalendarAnnualLayout : UICollectionViewFlowLayout
 
+- (void)updateLayoutForBounds:(CGRect)bounds;
+
 @end

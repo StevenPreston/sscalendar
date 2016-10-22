@@ -30,6 +30,12 @@
 }
 
 
+- (void)updateLayoutForBounds:(CGRect)bounds
+{
+    [((SSCalendarAnnualLayout *) _view.collectionViewLayout) updateLayoutForBounds:bounds];
+}
+
+
 #pragma mark - UICollectionViewDataSource Methods
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

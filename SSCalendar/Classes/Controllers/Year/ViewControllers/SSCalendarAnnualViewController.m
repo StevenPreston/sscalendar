@@ -44,6 +44,13 @@
 }
 
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [_dataSource updateLayoutForBounds:_yearView.bounds];
+}
+
+
 /*- (void)refresh
 {
     SSCalendarCountCache *calendarCounts = [[SSDataController shared] cachedCalendarCount];
