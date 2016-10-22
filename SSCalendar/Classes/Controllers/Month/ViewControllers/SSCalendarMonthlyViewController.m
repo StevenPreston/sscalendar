@@ -79,9 +79,6 @@
     {
         SSYearNode *firstYear = [_dataSource.years objectAtIndex:0];
         SSYearNode *lastYear = [_dataSource.years lastObject];
-        
-        //[self showLoading:YES animated:NO];
-        //[[SSDataController shared] requestEventCountWithStartYear:firstYear.value StartMonth:1 EndYear:lastYear.value EndMonth:lastYear.months.count];
     }
     else
     {
@@ -165,32 +162,5 @@
         }
     }
 }
-
-
-#pragma mark - NotificationObserver Methods
-
-/*- (void)notificationReceived:(NSNotification *)notification
-{
-    NSDictionary *userInfo = [notification userInfo];
-    
-    if ([notification.name isEqualToString:NOTIFICATION_REQUEST])
-    {
-        id request = [userInfo objectForKey:NOTIFICATION_REQUEST];
-        int result = [[userInfo objectForKey:NOTIFICATION_RESULT] intValue];
-        
-        if ([request isKindOfClass:[SSGetEventCountRequest class]])
-        {
-            SSGetEventCountRequest *getStaffRequest = request;
-            [self showLoading:NO animated:YES];
-            
-            NSArray *dates = [self handleRequest:getStaffRequest Result:result];
-            
-            if (dates != nil)
-            {
-                [_yearView reloadData];
-            }
-        }
-    }
-}*/
 
 @end

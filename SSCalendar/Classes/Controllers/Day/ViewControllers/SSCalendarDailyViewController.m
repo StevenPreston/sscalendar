@@ -236,46 +236,4 @@
     }
 }
 
-
-#pragma mark - NotificationObserver Methods
-
-/*- (void)notificationReceived:(NSNotification *)notification
-{
-    NSDictionary *userInfo = [notification userInfo];
-    
-    if ([notification.name isEqualToString:NOTIFICATION_REQUEST])
-    {
-        id request = [userInfo objectForKey:NOTIFICATION_REQUEST];
-        int result = [[userInfo objectForKey:NOTIFICATION_RESULT] intValue];
-        
-        if ([request isKindOfClass:[SSGetEventsRequest class]])
-        {
-            SSGetEventsRequest *getEventsRequest = request;
-            
-            if (result == NOTIFICATION_REQUEST_RESULT_SUCCESS)
-            {
-                if ([getEventsRequest.processingResult isKindOfClass:[NSArray class]])
-                {
-                    [_weekView reloadData];
-                    [_dayView reloadData];
-                    [self selectDayInWeekView];
-                    return;
-                }
-                else
-                {
-
-                }
-            }
-            else if (result == NOTIFICATION_REQUEST_RESULT_CONNECTION_ERROR)
-            {
-
-            }
-            else if (result == NOTIFICATION_REQUEST_RESULT_GENERAL_ERROR)
-            {
-
-            }
-        }
-    }
-}*/
-
 @end

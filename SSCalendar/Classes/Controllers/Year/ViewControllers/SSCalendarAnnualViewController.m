@@ -40,7 +40,6 @@
     [SSDataController shared].events = _events;
 
     [_yearView reloadData];
-    //[self refresh];
 }
 
 
@@ -49,22 +48,6 @@
     [super viewDidLayoutSubviews];
     [_dataSource updateLayoutForBounds:_yearView.bounds];
 }
-
-
-/*- (void)refresh
-{
-    SSCalendarCountCache *calendarCounts = [[SSDataController shared] cachedCalendarCount];
-    if (calendarCounts == nil) {
-        SSYearNode *firstYear = _dataSource.years[0];
-        SSYearNode *lastYear = [_dataSource.years lastObject];
-        
-        [self showLoading:YES animated:NO];
-        [[SSDataController shared] requestEventCountWithStartYear:firstYear.value StartMonth:1 EndYear:lastYear.value EndMonth:lastYear.months.count];
-    } else {
-        [[SSDataController shared] updateCalendarYears];
-        [_yearView reloadData];
-    }
-}*/
 
 
 #pragma mark - UICollectionViewDelegateMethods
@@ -84,32 +67,5 @@
 
     [self.navigationController pushViewController:viewController animated:YES];
 }
-
-
-#pragma mark - NotificationObserver Methods
-
-/*- (void)notificationReceived:(NSNotification *)notification
-{
-    NSDictionary *userInfo = [notification userInfo];
-    
-    if ([notification.name isEqualToString:NOTIFICATION_REQUEST])
-    {
-        id request = [userInfo objectForKey:NOTIFICATION_REQUEST];
-        int result = [[userInfo objectForKey:NOTIFICATION_RESULT] intValue];
-        
-        if ([request isKindOfClass:[SSGetEventCountRequest class]])
-        {
-            SSGetEventCountRequest *getEventCountRequest = request;
-            [self showLoading:NO animated:YES];
-            
-            NSArray *dates = [self handleRequest:getEventCountRequest Result:result];
-            
-            if (dates != nil)
-            {
-                [_yearView reloadData];
-            }
-        }
-    }
-}*/
 
 @end
