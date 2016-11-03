@@ -18,6 +18,8 @@
 
 @interface SSCalendarMonthlyViewController()
 
+@property (nonatomic, strong) SSDataController *dataController;
+
 - (void)scrollToIndexPath:(NSIndexPath *)indexPath updateTitle:(BOOL)updateTitle;
 
 @end
@@ -25,6 +27,27 @@
 @implementation SSCalendarMonthlyViewController
 
 #pragma mark - Lifecycle Methods
+
+- (id)initWithEvents:(NSArray *)events
+{
+    NSBundle *bundle = [SSCalendarUtils calendarBundle];
+    if (self = [super initWithNibName:@"SSCalendarAnnualViewController" bundle:bundle]) {
+        self.dataController = [[SSDataController alloc] init];
+        [_dataController setEvents:events];
+    }
+    return self;
+}
+
+
+- (id)initWithDataController:(SSDataController *)dataController
+{
+    NSBundle *bundle = [SSCalendarUtils calendarBundle];
+    if (self = [super initWithNibName:@"SSCalendarAnnualViewController" bundle:bundle]) {
+        self.dataController = [[SSDataController alloc] init];
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad
 {
@@ -74,7 +97,7 @@
 
 - (void)refresh
 {
-    SSCalendarCountCache *calendarCounts = [SSDataController shared].calendarCountCache;
+    SSCalendarCountCache *calendarCounts = _dataController.calendarCountCache;
     if (calendarCounts == nil)
     {
         SSYearNode *firstYear = [_dataSource.years objectAtIndex:0];
@@ -82,7 +105,7 @@
     }
     else
     {
-        [[SSDataController shared] updateCalendarYears];
+        [_dataController updateCalendarYears];
         [_yearView reloadData];
     }
 }

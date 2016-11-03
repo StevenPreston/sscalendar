@@ -14,7 +14,6 @@
 
 @property (nonatomic, strong) IBOutlet UICollectionView *yearView;
 @property (nonatomic, strong) SSCalendarAnnualDataSource *dataSource;
-@property (nonatomic, copy) NSArray *events;
 
 - (id)initWithEvents:(NSArray *)events;
 

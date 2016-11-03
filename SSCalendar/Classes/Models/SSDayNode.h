@@ -12,7 +12,7 @@
 @property (nonatomic, assign) NSInteger month;
 @property (nonatomic, assign) NSInteger year;
 @property (nonatomic, assign) NSInteger weekday;
-@property (nonatomic, copy) NSArray *events;
+//@property (nonatomic, copy) NSArray *events;
 @property (nonatomic, readonly) NSDate *date;
 @property (nonatomic, assign) BOOL hasEvents;
 

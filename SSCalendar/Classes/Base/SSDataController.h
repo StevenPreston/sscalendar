@@ -16,7 +16,7 @@
 /** Data structure used to build and display the calendar. */
 @property (nonatomic, copy) NSArray *calendarYears;
 
-+ (SSDataController *)shared;
+//+ (SSDataController *)shared;
 
 - (BOOL)areEventsLoadedForYear:(NSInteger)year Month:(NSInteger)month;
 - (BOOL)hasEventsYear:(NSInteger)year Month:(NSInteger)month Date:(NSInteger)day;

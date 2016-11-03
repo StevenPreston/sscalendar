@@ -15,14 +15,21 @@
 #import "SSDataController.h"
 #import "SSCalendarCountCache.h"
 
-@implementation SSCalendarAnnualViewController
+@interface SSCalendarAnnualViewController()
 
+@property (nonatomic, strong) SSDataController *dataController;
+
+@end
+
+@implementation SSCalendarAnnualViewController
 
 - (id)initWithEvents:(NSArray *)events
 {
     NSBundle *bundle = [SSCalendarUtils calendarBundle];
     if (self = [super initWithNibName:@"SSCalendarAnnualViewController" bundle:bundle]) {
-        self.events = events;
+
+        self.dataController = [[SSDataController alloc] init];
+        [_dataController setEvents:events];
     }
     return self;
 }
@@ -36,8 +43,7 @@
     _yearView.dataSource = _dataSource;
     _yearView.delegate = self;
 
-    _dataSource.years = [SSDataController shared].calendarYears;
-    [SSDataController shared].events = _events;
+    _dataSource.years = _dataController.calendarYears;
 
     [_yearView reloadData];
 }
@@ -57,7 +63,7 @@
     SSYearNode *year = _dataSource.years[indexPath.section];
 
     NSBundle *bundle = [SSCalendarUtils calendarBundle];
-    SSCalendarMonthlyViewController *viewController = [[SSCalendarMonthlyViewController alloc] initWithNibName:@"SSCalendarMonthlyViewController" bundle:bundle];
+    SSCalendarMonthlyViewController *viewController = [[SSCalendarMonthlyViewController alloc] initWithDataController:_dataController];
     
     NSInteger section = indexPath.section * year.months.count + indexPath.row;
     NSIndexPath *startingIndexPath = [NSIndexPath indexPathForRow:0 inSection:section];

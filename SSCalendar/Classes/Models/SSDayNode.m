@@ -80,7 +80,7 @@
 
 - (NSArray *)events
 {
-    return [[SSDataController shared] cachedEventsForYear:_year Month:_month Day:_value];
+    return nil;//[[SSDataController shared] cachedEventsForYear:_year Month:_month Day:_value];
 }
 
 

@@ -9,6 +9,7 @@
 #import "SSCalendarEventsCell.h"
 #import "SSCalendarEventsTableViewController.h"
 #import "SSDayNode.h"
+#import "SSDataController.h"
 //#import "SSLoadingView.h"
 
 @implementation SSCalendarEventsCell
@@ -33,7 +34,7 @@
 - (void)setDay:(SSDayNode *)day
 {
     _day = day;
-    _tableViewController.events = _day.events;
+    _tableViewController.events = [_dataController cachedEventsForYear:_day.year Month:_day.month Day:_day.value];
     
     /*if ([[SSDataController shared] isRequestingEventsForYear:_day.year Month:_day.month])
     {

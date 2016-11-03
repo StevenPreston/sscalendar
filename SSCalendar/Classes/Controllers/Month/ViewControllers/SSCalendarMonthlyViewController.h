@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Stellar16. All rights reserved.
 //
 
-//#import "SSContentViewController.h"
+@class SSDataController;
 
 @class SSCalendarMonthlyDataSource;
 
@@ -22,6 +22,8 @@
 @property (nonatomic, strong) IBOutlet UICollectionView *yearView;
 @property (nonatomic, strong) SSCalendarMonthlyDataSource *dataSource;
 
+- (id)initWithDataController:(SSDataController *)dataController;
+- (id)initWithEvents:(NSArray *)events;
 - (IBAction)todayPressed:(id)sender;
 
 @end

@@ -16,18 +16,6 @@
 
 @implementation SSDataController
 
-#pragma mark - Static Methods
-
-+ (SSDataController *)shared
-{
-    static SSDataController *_sharedDataStore = nil;
-    static dispatch_once_t oncePredicate;
-    dispatch_once(&oncePredicate, ^{
-        _sharedDataStore = [[self alloc] init];
-    });
-    return _sharedDataStore;
-}
-
 #pragma mark - Lifecycle Methods
 
 - (id)init
@@ -74,7 +62,7 @@
 }
 
 - (void)updateCalendarYears {
-    for (SSYearNode *year in _calendarYears) {
+    for (SSYearNode *year in self.calendarYears) {
         for (SSDayNode *day in year.days) {
             day.hasEvents = [self hasEventsYear:day.year Month:day.month Date:day.value];
         }
