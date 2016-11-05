@@ -62,7 +62,6 @@
 {
     SSYearNode *year = _dataSource.years[indexPath.section];
 
-    NSBundle *bundle = [SSCalendarUtils calendarBundle];
     SSCalendarMonthlyViewController *viewController = [[SSCalendarMonthlyViewController alloc] initWithDataController:_dataController];
     
     NSInteger section = indexPath.section * year.months.count + indexPath.row;

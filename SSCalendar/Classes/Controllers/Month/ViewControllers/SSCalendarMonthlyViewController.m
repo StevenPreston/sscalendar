@@ -100,12 +100,7 @@
 - (void)refresh
 {
     SSCalendarCountCache *calendarCounts = _dataController.calendarCountCache;
-    if (calendarCounts == nil)
-    {
-        SSYearNode *firstYear = [_dataSource.years objectAtIndex:0];
-        SSYearNode *lastYear = [_dataSource.years lastObject];
-    }
-    else
+    if (calendarCounts != nil)
     {
         [_dataController updateCalendarYears];
         [_yearView reloadData];
@@ -166,7 +161,6 @@
     
     SSCalendarDayCell *cell = (SSCalendarDayCell *) [collectionView cellForItemAtIndexPath:indexPath];
 
-    NSBundle *bundle = [SSCalendarUtils calendarBundle];
     SSCalendarDailyViewController *viewController = [[SSCalendarDailyViewController alloc] initWithDataController:_dataController];
     viewController.day = cell.day;
     [self.navigationController pushViewController:viewController animated:YES];
