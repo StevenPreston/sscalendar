@@ -6,12 +6,17 @@
 
 ## Introduction
 
-SSCalendar is a UI library that can be used to display a calendar of events within your app. This calendar library was originally built in 2013 for a project that required a calendar experience similar to the revamped Apple calendar app in iOS 7. At the time, I found very few calendar libraries and decided to build one. 
+SSCalendar is a UI library that can be used to display a calendar of events within your app. This calendar library was originally built in 2013 for a project that required a calendar experience similar to the revamped Apple calendar app in iOS 7. At the time, I found very few calendar libraries and decided to build one. Note that this calendar is not designed as a picker but rather to display an existing set of events.
 
-SSCalendar provides 3 different calendar views - an annual view, monthly view and weekly/daily view. Note that this calendar is not designed as a picker but rather to display an existing set of events.
+SSCalendar provides 3 different calendar views:
 
+### Annual view
 ![Annual](https://github.com/StevenPreston/SSCalendar/blob/master/Screenshots/1.gif)
+
+### Monthly view
 ![Monthly](https://github.com/StevenPreston/SSCalendar/blob/master/Screenshots/2.gif)
+
+### Weekly and daily view
 ![Daily/Weekly](https://github.com/StevenPreston/SSCalendar/blob/master/Screenshots/3.gif)
 
 ## Shortfalls
