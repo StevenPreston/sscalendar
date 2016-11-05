@@ -8,7 +8,7 @@
 
 //#import "SSContentViewController.h"
 
-@class SSCalendarWeekViewController, SSCalendarDayViewController, SSDayNode;
+@class SSCalendarWeekViewController, SSCalendarDayViewController, SSDayNode, SSDataController;
 
 @interface SSCalendarDailyViewController : UIViewController <UICollectionViewDelegateFlowLayout>
 {
@@ -28,6 +28,8 @@
 @property (nonatomic, strong) IBOutlet UICollectionView *dayView;
 @property (nonatomic, strong) SSCalendarDayViewController *dayViewController;
 
+- (id)initWithEvents:(NSArray *)events;
+- (id)initWithDataController:(SSDataController *)dataController;
 - (IBAction)todayPressed:(id)sender;
 
 @end

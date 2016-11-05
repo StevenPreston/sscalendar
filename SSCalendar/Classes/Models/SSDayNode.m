@@ -78,10 +78,10 @@
 }
 
 
-- (NSArray *)events
+/*- (NSArray *)events
 {
     return nil;//[[SSDataController shared] cachedEventsForYear:_year Month:_month Day:_value];
-}
+}*/
 
 
 /*- (BOOL)hasEvents

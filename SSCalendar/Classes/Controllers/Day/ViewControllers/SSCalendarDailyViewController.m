@@ -14,8 +14,11 @@
 #import "SSCalendarWeekHeaderView.h"
 #import "SSDayNode.h"
 #import "SSConstants.h"
+#import "SSDataController.h"
 
 @interface SSCalendarDailyViewController()
+
+@property (nonatomic, strong) SSDataController *dataController;
 
 - (void)scrollWeekViewToDay;
 - (void)scrollDayViewToDay;
@@ -27,6 +30,29 @@
 @implementation SSCalendarDailyViewController
 
 #pragma mark - Lifecycle Methods
+
+- (id)initWithEvents:(NSArray *)events
+{
+    NSBundle *bundle = [SSCalendarUtils calendarBundle];
+    if (self = [super initWithNibName:@"SSCalendarDailyViewController" bundle:bundle]) {
+        self.dataController = [[SSDataController alloc] init];
+        [_dataController setEvents:events];
+        self.years = _dataController.calendarYears;
+    }
+    return self;
+}
+
+
+- (id)initWithDataController:(SSDataController *)dataController
+{
+    NSBundle *bundle = [SSCalendarUtils calendarBundle];
+    if (self = [super initWithNibName:@"SSCalendarDailyViewController" bundle:bundle]) {
+        self.dataController = dataController;
+        self.years = _dataController.calendarYears;
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad
 {

@@ -34,7 +34,7 @@
 - (void)setDay:(SSDayNode *)day
 {
     _day = day;
-    _tableViewController.events = [_dataController cachedEventsForYear:_day.year Month:_day.month Day:_day.value];
+    _tableViewController.events = day.events;
     
     /*if ([[SSDataController shared] isRequestingEventsForYear:_day.year Month:_day.month])
     {

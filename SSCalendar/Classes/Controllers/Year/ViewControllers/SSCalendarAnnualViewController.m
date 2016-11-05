@@ -69,7 +69,6 @@
     NSIndexPath *startingIndexPath = [NSIndexPath indexPathForRow:0 inSection:section];
     
     viewController.startingIndexPath = startingIndexPath;
-    viewController.years = _dataSource.years;
 
     [self.navigationController pushViewController:viewController animated:YES];
 }

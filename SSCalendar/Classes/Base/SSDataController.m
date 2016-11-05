@@ -65,6 +65,7 @@
     for (SSYearNode *year in self.calendarYears) {
         for (SSDayNode *day in year.days) {
             day.hasEvents = [self hasEventsYear:day.year Month:day.month Date:day.value];
+            day.events = [self cachedEventsForYear:day.year Month:day.month Day:day.value];
         }
     }
 }
@@ -79,8 +80,8 @@
     }
 
     [_calendarCountCache putDates:dates];
-    [self updateCalendarYears];
     [_calendarCache putEvents:sortedResultsArray];
+    [self updateCalendarYears];
 }
 
 @end

@@ -13,7 +13,6 @@
     IBOutlet SSLoadingView *loadingView;
 }
 
-@property (nonatomic, strong) SSDataController *dataController;
 @property (nonatomic, strong) SSDayNode *day;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) SSCalendarEventsTableViewController *tableViewController;

@@ -34,6 +34,7 @@
     if (self = [super initWithNibName:@"SSCalendarAnnualViewController" bundle:bundle]) {
         self.dataController = [[SSDataController alloc] init];
         [_dataController setEvents:events];
+        self.years = _dataController.calendarYears;
     }
     return self;
 }
@@ -43,7 +44,8 @@
 {
     NSBundle *bundle = [SSCalendarUtils calendarBundle];
     if (self = [super initWithNibName:@"SSCalendarAnnualViewController" bundle:bundle]) {
-        self.dataController = [[SSDataController alloc] init];
+        self.dataController = dataController;
+        self.years = _dataController.calendarYears;
     }
     return self;
 }
@@ -165,8 +167,7 @@
     SSCalendarDayCell *cell = (SSCalendarDayCell *) [collectionView cellForItemAtIndexPath:indexPath];
 
     NSBundle *bundle = [SSCalendarUtils calendarBundle];
-    SSCalendarDailyViewController *viewController = [[SSCalendarDailyViewController alloc] initWithNibName:@"SSCalendarDailyViewController" bundle:bundle];
-    viewController.years = _years;
+    SSCalendarDailyViewController *viewController = [[SSCalendarDailyViewController alloc] initWithDataController:_dataController];
     viewController.day = cell.day;
     [self.navigationController pushViewController:viewController animated:YES];
 }
