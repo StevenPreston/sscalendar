@@ -6,7 +6,7 @@ target 'SSCalendar_Example' do
   target 'SSCalendar_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
+    pod 'Quick'
+    pod 'Nimble'
   end
 end
