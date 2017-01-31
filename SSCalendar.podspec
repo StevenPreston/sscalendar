@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SSCalendar'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'A calendar UI library that somewhat mimics a stripped down version of the default calendar app experience.'
 
   s.description      = <<-DESC
